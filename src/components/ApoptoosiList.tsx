@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { ApoptoosiForm } from './ApoptoosiForm';
 import { Registeration } from '../utils/api';
-import { render } from 'react-dom';
 
 const API_URL = 'http://localhost:3000';
 
