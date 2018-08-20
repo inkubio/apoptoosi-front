@@ -24,39 +24,49 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
   <>
     <h2>Sign up pls</h2>
     <form className="Signup" onSubmit={onSubmit}>
-      <label>Name</label>
-      <input
-        type="text"
-        name="name"
-        value={formFields.name}
-        onChange={onChange}
-      />
+      <div>
+        <label>Name</label>
+        <input
+          type="text"
+          name="name"
+          value={formFields.name}
+          onChange={onChange}
+        />
+      </div>
 
-      <label>SeatingGroup</label>
-      <input
-        type="text"
-        name="seatingGroup"
-        value={formFields.seatingGroup}
-        onChange={onChange}
-      />
+      <div>
+        <label>SeatingGroup</label>
+        <input
+          type="text"
+          name="seatingGroup"
+          value={formFields.seatingGroup}
+          onChange={onChange}
+        />
+      </div>
 
-      <label>Alcohol</label>
-      <input
-        type="checkbox"
-        name="alcohol"
-        checked={formFields.alcohol}
-        onChange={onChange}
-      />
+      <div>
+        <label>Alcohol</label>
+        <input
+          type="checkbox"
+          name="alcohol"
+          checked={formFields.alcohol}
+          onChange={onChange}
+        />
+      </div>
 
-      <label>Helloings</label>
-      <input
-        type="text"
-        name="text"
-        value={formFields.helloings}
-        onChange={onChange}
-      />
+      <div>
+        <label>Helloings</label>
+        <input
+          type="text"
+          name="text"
+          value={formFields.helloings}
+          onChange={onChange}
+        />
+      </div>
 
-      <input type="submit" value="Submit" />
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
     </form>
   </>
 );
