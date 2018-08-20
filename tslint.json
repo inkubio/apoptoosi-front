@@ -13,6 +13,7 @@
         "no-eval": true,
         "no-trailing-whitespace": true,
         "no-unsafe-finally": true,
+        "no-unused-variable": true,
         "one-line": [
             true,
             "check-open-brace",
@@ -54,6 +55,7 @@
         "no-trailing-whitespace": true,
         "no-unsafe-finally": true,
         "no-var-keyword": true,
+        "no-unused-variable": true,
         "one-line": [
             true,
             "check-open-brace",
@@ -88,6 +90,10 @@
             "check-operator",
             "check-separator",
             "check-type"
-        ]
+        ],
+        "compilerOptions": {
+            "noUnusedLocals": true,
+            "noUnusedParameters": true,
+        }
     }
 }
