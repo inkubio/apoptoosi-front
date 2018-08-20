@@ -1,12 +1,11 @@
-$bg-color: yellow;
-$border-color: red;
+$LIGHT: #f1f1f1;
+$DARK: #1a0826;
+$GOLD: #bdd836;
 
-.app {
-  font-family: helvetica, arial, sans-serif;
-  padding: 2em;
-  border: 5px solid $border-color;
+.dark {
+  color: $DARK;
+}
 
-  p {
-    background-color: $bg-color;
-  }
+.gold {
+  color: $GOLD;
 }
