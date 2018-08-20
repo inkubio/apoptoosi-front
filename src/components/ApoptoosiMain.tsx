@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { ApoptoosiForm } from './ApoptoosiForm';
 import { ApoptoosiList } from './ApoptoosiList';
-import { Registeration, postRegisteration } from '../utils/api';
+import {
+  Registeration,
+  getRegisterations,
+  postRegisteration,
+} from '../utils/api';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -51,6 +55,11 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
 
   handleSubmit() {
     postRegisteration(this.state.newRegisteration);
+  }
+
+  async componentDidMount() {
+    const registerations = await getRegisterations();
+    this.setState({ registerations, loading: false });
   }
 
   render() {
