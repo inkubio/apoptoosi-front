@@ -22,7 +22,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
   onSubmit,
 }) => (
   <>
-    <h2>Sign up pls</h2>
+    <h2 className="Title">Sign up pls</h2>
     <form className="Signup" onSubmit={onSubmit}>
       <div>
         <label>Name</label>

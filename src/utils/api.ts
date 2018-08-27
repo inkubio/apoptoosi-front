@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://localhost:5000';
 
 /** General registeration object, used to send new
  * registerations to API, and previous registerations
@@ -22,7 +22,7 @@ export interface Registeration {
 export const getRegisterations = async (): Promise<Registeration[]> => {
   try {
     const resp = await fetch(
-      `${API_URL}/api/RegisterirationData/Registerirations`,
+      `${API_URL}/api/RegistrationData/Registrations`,
     );
     const data = await resp.json();
     return data;
@@ -37,7 +37,7 @@ export const postRegisteration = async (
 ): Promise<null> => {
   try {
     const resp = await fetch(
-      `${API_URL}/api/RegisterirationData/Createregisteration`,
+      `${API_URL}/api/RegistrationData/CreateRegistration`,
       {
         headers: {
           Connection: 'keep-alive',
