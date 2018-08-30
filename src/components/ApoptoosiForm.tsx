@@ -22,14 +22,33 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
   onSubmit,
 }) => (
   <>
-    <h2 className="Title">Sign up pls</h2>
+    <h2 className="Title">Registration</h2>
     <form className="Signup" onSubmit={onSubmit}>
       <div>
-        <label>Name</label>
+        <label>First name</label>
         <input
           type="text"
-          name="name"
-          value={formFields.name}
+          name="firstName"
+          value={formFields.firstName}
+          onChange={onChange}
+        />
+      </div>
+      <div>
+        <label>Last name</label>
+        <input
+          type="text"
+          name="lastName"
+          value={formFields.lastName}
+          onChange={onChange}
+        />
+      </div>
+
+            <div>
+        <label>Email</label>
+        <input
+          type="email"
+          name="email"
+          value={formFields.email}
           onChange={onChange}
         />
       </div>
@@ -59,7 +78,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
         <input
           type="text"
           name="text"
-          value={formFields.helloings}
+          value={formFields.text}
           onChange={onChange}
         />
       </div>

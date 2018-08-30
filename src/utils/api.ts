@@ -5,9 +5,14 @@ const API_URL = 'http://localhost:5000';
  * that get fetched also follow this structure.
  */
 export interface Registeration {
-  /** Name of the attendee */
-  name: string;
+  /** First name of the attendee */
+  firstName: string;
 
+  /**Last name of the attendee **/
+  lastName: string;
+
+  /**Email of the attendee **/ 
+  email: string;
   /** People with whom the attendee wants to sit with */
   seatingGroup: string;
 
@@ -15,7 +20,7 @@ export interface Registeration {
   alcohol: boolean;
 
   /** What the attendee wants to tell other attendees */
-  helloings: string;
+  text: string;
 }
 
 /** Fetch a list of previous registerations to show on the website */

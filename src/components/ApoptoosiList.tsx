@@ -20,7 +20,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
   loading,
 }) => (
   <>
-    <h2 className="Title">Signed up registerers</h2>
+    <h2 className="Title">Registered attendees</h2>
     {loading ? (
       <p>
         <em>Loading...</em>
@@ -41,11 +41,13 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
             </thead>
             <tbody>
               {registerations.map(registeration => (
-                <tr key={registeration.name}>
-                  <td>{registeration.name}</td>
-                  <td>{registeration.seatingGroup}</td>
+                <tr key={registeration.lastName}>
+                  <td>{registeration.firstName}</td>
+                  <td>{registeration.lastName}</td>
+                  <td>{registeration.seatingGroup}</td>¨
+                  <td>{registeration.email}</td>
                   <td>{registeration.alcohol}</td>
-                  <td>{registeration.helloings}</td>
+                  <td>{registeration.text}</td>
                 </tr>
               ))}
             </tbody>

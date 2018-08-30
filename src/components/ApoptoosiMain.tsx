@@ -28,10 +28,12 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
 
     this.state = {
       newRegisteration: {
-        name: '',
+        firstName: '',
+        lastName: '',
+        email: '',
         seatingGroup: '',
         alcohol: false,
-        helloings: '',
+        text: '',
       },
       registerations: [],
       loading: true,
