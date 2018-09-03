@@ -21,9 +21,11 @@ main {
   grid-template-areas:
     ".     .      ."
     ".  heading   ."
+    ".  countdown ."
     ".   signup   ."
     ". registrars ."
     ".     .      .";
+  font-family: 'Abril Fatface', cursive;
 }
 
 .Title {
@@ -36,9 +38,14 @@ main {
 
 .SignupForm {
   grid-area: signup;
-  text-align: left;
+
 }
 
 .RegisteredList {
   grid-area: registrars;
+}
+
+.Countdown {
+  grid-area: countdown;
+  text-align: center;
 }

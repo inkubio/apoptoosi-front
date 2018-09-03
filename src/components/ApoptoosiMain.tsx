@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { ApoptoosiForm } from './ApoptoosiForm';
 import { ApoptoosiList } from './ApoptoosiList';
+import {ApoptoosiCountdown} from './ApoptoosiCountdown';
+
 import {
   Registeration,
   getRegisterations,
@@ -69,6 +71,10 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
       <>
           <h1 className="Heading Title">Apoptoosi</h1>
           
+          <section className="Countdown">
+            <ApoptoosiCountdown />
+          </section>
+
           <section className="SignupForm">
             <ApoptoosiForm
               formFields={this.state.newRegisteration}
