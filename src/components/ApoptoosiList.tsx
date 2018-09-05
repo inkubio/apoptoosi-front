@@ -28,7 +28,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
     ) : (
       <>
         {registerations.length === 0 ? (
-          <p>No registerations yet :(</p>
+          <p>No registerations.</p>
         ) : (
           <table className="table">
             <thead>

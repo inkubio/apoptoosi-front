@@ -24,7 +24,6 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
   <>
     <h2 className="Title">Registration</h2>
     <form className="Signup" onSubmit={onSubmit}>
-      <div>
         <label>First name</label>
         <input
           type="text"
@@ -32,8 +31,6 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
           value={formFields.firstName}
           onChange={onChange}
         />
-      </div>
-      <div>
         <label>Last name</label>
         <input
           type="text"
@@ -41,9 +38,6 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
           value={formFields.lastName}
           onChange={onChange}
         />
-      </div>
-
-            <div>
         <label>Email</label>
         <input
           type="email"
@@ -51,9 +45,6 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
           value={formFields.email}
           onChange={onChange}
         />
-      </div>
-
-      <div>
         <label>SeatingGroup</label>
         <input
           type="text"
@@ -61,9 +52,6 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
           value={formFields.seatingGroup}
           onChange={onChange}
         />
-      </div>
-
-      <div>
         <label>Alcohol</label>
         <input
           type="checkbox"
@@ -71,9 +59,6 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
           checked={formFields.alcohol}
           onChange={onChange}
         />
-      </div>
-
-      <div>
         <label>Helloings</label>
         <input
           type="text"
@@ -81,11 +66,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
           value={formFields.text}
           onChange={onChange}
         />
-      </div>
-
-      <div>
         <input type="submit" value="Submit" />
-      </div>
     </form>
   </>
 );
