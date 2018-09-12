@@ -16,16 +16,16 @@ main {
   background: url("../img/vector\ logo\ gray.svg");
   background-size: auto 100%;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 1fr auto auto auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    ".     .      ."
-    "heading  heading   heading"
-    ".  countdown ."
-    ".   signup   ."
-    ".  registrars ."
-    ".     .      .";
-  font-family: 'Abril Fatface', cursive;
+    ".  .     .       .         .     ."
+    ". heading  heading   heading  .  ."
+    ".  .   countdown     .     .     ."
+    ".  .   signup      .       .     ."
+    ".  .  registrars      .    .     ."
+    ".  .   .    .    .     .";
+  font-family: 'Oranienbaum', serif;
 }
 
 .Title {
