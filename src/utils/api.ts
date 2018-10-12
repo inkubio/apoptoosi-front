@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000';
+const API_URL = 'http://localhost:5001';
 
 /** General registeration object, used to send new
  * registerations to API, and previous registerations
