@@ -10,21 +10,23 @@ $GOLD: #bdd836;
   color: $GOLD;
 }
 
+html {
+  height: 100%;
+  background: url("../img/vector\ logo.svg"), url("../img/prettyPaint.jpg");
+  background-size: auto, cover;
+  background-position: top, center;
+}
+
 main {
   width: 100%;
   height: 95vh;
-  background: url("../img/vector\ logo\ gray.svg");
-  background-size: auto 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    ".  .     .       .         .     ."
-    ". heading  heading   heading  .  ."
-    ".  .   countdown     .     .     ."
-    ".  .   signup      .       .     ."
-    ".  .  registrars      .    .     ."
-    ".  .   .    .    .     .";
+    "heading"
+    "countdown"
+    "signup"
+    "registrars";
   font-family: 'Oranienbaum', serif;
 }
 

@@ -69,13 +69,13 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
   render() {
     return (
       <>
-          <h1 className="Heading Title">Apoptoosi</h1>
           
           <section className="Countdown">
+          <h1 className="Heading Title">Apoptoosi</h1>
             <ApoptoosiCountdown />
           </section>
 
-          <section className="SignupForm">
+          {/* <section className="SignupForm">
             <ApoptoosiForm
               formFields={this.state.newRegisteration}
               onChange={this.handleChange}
@@ -88,7 +88,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
               registerations={this.state.registerations}
               loading={this.state.loading}
             />
-          </section>
+          </section> */}
       </>
     );
   }
