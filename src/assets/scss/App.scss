@@ -2,6 +2,11 @@ $LIGHT: #f1f1f1;
 $DARK: #1a0826;
 $GOLD: #bdd836;
 
+@font-face {
+  font-family: 'chelsea4';
+  src: url("../fonts/Chelsea.ttf") format("truetype");
+}
+
 .dark {
   color: $DARK;
 }
@@ -12,7 +17,7 @@ $GOLD: #bdd836;
 
 html {
   height: 100%;
-  background: url("../img/vector\ logo.svg"), url("../img/prettyPaint.jpg");
+  background: url("../img/vector\ logo.svg");//, url("../img/prettyPaint.jpg");
   background-size: auto, cover;
   background-position: top, center;
 }
@@ -27,7 +32,7 @@ main {
     "countdown"
     "signup"
     "registrars";
-  font-family: 'Oranienbaum', serif;
+  font-family: 'chelsea4', sans-serif;
 }
 
 .Title {
