@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { stringify } from 'querystring';
 
 interface IApoptoosiCountdown {
     startDate: Date;
@@ -41,10 +42,10 @@ export class ApoptoosiCountdown extends React.Component<{}, IApoptoosiCountdown>
         seconds -= days * 3600 * 24;
         const hours = Math.floor(seconds / 3600);
         seconds -= hours * 3600;
-        const minutes = Math.floor(seconds / 60);
+        var minutes = Math.floor(seconds / 60);
         seconds -= minutes * 60;
-        
-        return `${days}:${hours}:${minutes}:${seconds}`;
+
+        return `${days}:${hours}:${minutes < 10 ? "0" + JSON.stringify(minutes) : JSON.stringify(minutes)}:${seconds < 10 ? "0" + JSON.stringify(seconds) : JSON.stringify(seconds)}`;
     }
 
     render(){

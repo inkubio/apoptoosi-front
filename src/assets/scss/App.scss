@@ -1,6 +1,9 @@
 $LIGHT: #f1f1f1;
 $DARK: #1a0826;
 $GOLD: #bdd836;
+$FontColor1: #36c;
+$FontColor2: #5c85d6;
+$FontColor: #24478f;
 
 @font-face {
   font-family: 'chelsea4';
@@ -18,8 +21,9 @@ $GOLD: #bdd836;
 html {
   height: 100%;
   background: url("../img/vector_logo.svg"), url("../img/prettyPaint.jpg");
-  background-size: auto, cover;
-  background-position: top, center;
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
 }
 
 main {
@@ -33,6 +37,7 @@ main {
     "signup"
     "registrars";
   font-family: 'chelsea4', sans-serif;
+  color: $FontColor;
 }
 
 .Title {
@@ -41,7 +46,7 @@ main {
 
 .Heading {
   grid-area: heading;
-  font-size: xx-large;
+  font-size: 10vw;
 }
 
 .SignupForm {
@@ -66,4 +71,5 @@ main {
 .Countdown {
   grid-area: countdown;
   text-align: center;
+  font-size: 10vw;
 }
