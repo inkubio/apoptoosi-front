@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5001';
+const API_URL = 'http://localhost:5000';
 
 /** General registeration object, used to send new
  * registerations to API, and previous registerations
@@ -40,6 +40,20 @@ export const getRegisterations = async (): Promise<Registeration[]> => {
 export const postRegisteration = async (
   registerationData: Registeration,
 ): Promise<null> => {
+  console.log(JSON.stringify(registerationData, null, 4));
+
+  console.log(registerationData.firstName);
+  console.log(registerationData.lastName);
+  console.log(registerationData.email);
+  console.log(registerationData.seatingGroup);
+  console.log(registerationData.alcohol);
+  console.log(registerationData.text);
+
+  alert(JSON.stringify(registerationData, null, 4));
+  // console.log(JSON.stringify(registerationData, null, 4));console.log(JSON.stringify(registerationData, null, 4));
+  
+
+  
   try {
     const resp = await fetch(
       `${API_URL}/api/RegistrationData/CreateRegistration`,
