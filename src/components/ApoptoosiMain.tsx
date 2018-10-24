@@ -70,11 +70,19 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
     return (
       <>
           
+          <section>
+          <h1 className="Heading Title">Inkubio 15</h1>
+          </section>
+
           <section className="Countdown">
-          <h1 className="Heading Title">Apoptoosi</h1>
+          <h1 className="Heading Title">Apoptoosi XV</h1>
+          <h2 className="Heading Title">2.3.2018</h2>
             <ApoptoosiCountdown />
           </section>
 
+          <section className="ContactInformation">
+
+          </section>
           {/* <section className="SignupForm">
             <ApoptoosiForm
               formFields={this.state.newRegisteration}
