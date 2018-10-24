@@ -2,12 +2,15 @@ import * as React from 'react';
 import { ApoptoosiForm } from './ApoptoosiForm';
 import { ApoptoosiList } from './ApoptoosiList';
 import {ApoptoosiCountdown} from './ApoptoosiCountdown';
+import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
+import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation;'
 
 import {
   Registeration,
   getRegisterations,
   postRegisteration,
 } from '../utils/api';
+import { AnyMxRecord } from 'dns';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -18,6 +21,9 @@ interface IApoptoosiState {
 
   /** API fetching state */
   loading: boolean;
+
+  contacts: IApoptoosiContactInformationProps[];
+
 }
 
 /** Main component for Apoptoosi website.
@@ -39,7 +45,27 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
       },
       registerations: [],
       loading: true,
-    };
+      contacts: [
+          {
+            name: "Linda Wederhorn",
+            email: "linda.wederhorn(ät)aalto.fi",
+            phoneNumber: "045 403 3693",
+          },      
+          {
+            name: "Eeva-Sofia Haukipuro",
+            email: "eeva-sofia.haukipuro(ät)aalto.fi",
+            phoneNumber: "040 089 5200‬",
+          },
+          {
+            name: "Milja Leinonen",
+            email: "milja.leinonen(ät)aalto.fi",
+            phoneNumber: "050 911 7088‬",
+          },
+        ]
+      
+      };
+
+    ]
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -72,16 +98,18 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           
           <section>
           <h1 className="Heading Title">Inkubio 15</h1>
+          <h1 className="Heading Title">Apoptoosi XV</h1>
+          <h2 className="Heading Title">2.3.2018</h2>
           </section>
 
           <section className="Countdown">
-          <h1 className="Heading Title">Apoptoosi XV</h1>
-          <h2 className="Heading Title">2.3.2018</h2>
+          {/* <h1 className="Heading Title">Apoptoosi XV</h1>
+          <h2 className="Heading Title">2.3.2018</h2> */}
             <ApoptoosiCountdown />
           </section>
 
           <section className="ContactInformation">
-
+              <ApoptoosiContactInformationTable contacts={this.state.contacts}/>
           </section>
           {/* <section className="SignupForm">
             <ApoptoosiForm

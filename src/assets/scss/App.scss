@@ -34,10 +34,16 @@ main {
   grid-template-areas:
     "heading"
     "countdown"
-    "signup"
-    "registrars";
+    // "signup"
+    // "registrars"
+    "ContactInformation";
   font-family: 'chelsea4', sans-serif;
   color: $FontColor;
+}
+
+.ContactInformation {
+  margin: 0 auto;
+  grid-area: ContactInformation;
 }
 
 .Title {
@@ -46,7 +52,7 @@ main {
 
 .Heading {
   grid-area: heading;
-  font-size: 10vw;
+  font-size: 5vw;
 }
 
 .SignupForm {
@@ -71,5 +77,5 @@ main {
 .Countdown {
   grid-area: countdown;
   text-align: center;
-  font-size: 10vw;
+  font-size: 5vw;
 }

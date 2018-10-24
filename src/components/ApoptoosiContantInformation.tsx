@@ -1,13 +1,12 @@
 import * as React from 'react';
 
-interface IApoptoosiContactInformationProps {
+export interface IApoptoosiContactInformationProps {
     name: string;
     email: string;
     phoneNumber: string;
 }
 
-export const ApoptoosiContactInformation: React.SFC<IApoptoosiContactInformationProps>
-= (
+export const ApoptoosiContactInformation: React.SFC<IApoptoosiContactInformationProps> = (
     {name, email, phoneNumber}
 ) => (
     <>
