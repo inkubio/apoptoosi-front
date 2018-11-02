@@ -3,7 +3,7 @@ import { ApoptoosiForm } from './ApoptoosiForm';
 import { ApoptoosiList } from './ApoptoosiList';
 import {ApoptoosiCountdown} from './ApoptoosiCountdown';
 import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
-import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation;'
+import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
 
 import {
   Registeration,
@@ -64,8 +64,6 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         ]
       
       };
-
-    ]
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
