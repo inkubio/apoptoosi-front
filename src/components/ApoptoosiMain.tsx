@@ -24,6 +24,7 @@ interface IApoptoosiState {
 
   contacts: IApoptoosiContactInformationProps[];
 
+  startDate: Date;
 }
 
 /** Main component for Apoptoosi website.
@@ -61,8 +62,8 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             email: "milja.leinonen(ät)aalto.fi",
             phoneNumber: "050 911 7088‬",
           },
-        ]
-      
+        ],
+        startDate: new Date("2019-01-20T16:00:00"),
       };
 
     this.handleChange = this.handleChange.bind(this);
@@ -93,36 +94,40 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
   render() {
     return (
       <>
-          
           <section>
-          <h1 className="Heading Title">Inkubio 15</h1>
-          <h1 className="Heading Title">Apoptoosi XV</h1>
-          <h2 className="Heading Title">2.3.2018</h2>
+            <h1 className="Heading Title">Inkubio 15</h1>
+            <h1 className="Heading Title">Apoptoosi XV</h1>
+            <h2 className="Heading Title">2.3.2018</h2>
           </section>
-
           <section className="Countdown">
-          {/* <h1 className="Heading Title">Apoptoosi XV</h1>
-          <h2 className="Heading Title">2.3.2018</h2> */}
             <ApoptoosiCountdown />
           </section>
-
           <section className="ContactInformation">
               <ApoptoosiContactInformationTable contacts={this.state.contacts}/>
           </section>
-          {/* <section className="SignupForm">
-            <ApoptoosiForm
-              formFields={this.state.newRegisteration}
-              onChange={this.handleChange}
-              onSubmit={this.handleSubmit}
-            />
-          </section>
+          {/* {
+            if(new Date() >= this.startDate)
+            {
+              return(
+                <section className="SignupForm">
+                <ApoptoosiForm
+                  formFields={this.state.newRegisteration}
+                  onChange={this.handleChange}
+                  onSubmit={this.handleSubmit}
+                  />
+                </section>
 
-          <section className="RegisteredList">
-            <ApoptoosiList
-              registerations={this.state.registerations}
-              loading={this.state.loading}
-            />
-          </section> */}
+                <section className="RegisteredList">
+                <ApoptoosiList
+                  registerations={this.state.registerations}
+                  loading={this.state.loading}
+                  />
+                </section>
+            );
+            } else {
+              return null;
+            } 
+         } */}
       </>
     );
   }

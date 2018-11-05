@@ -6,8 +6,21 @@ interface IApoptoosiContactInformationTableProps {
 }
 
 export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInformationTableProps> = ({contacts}) => (
+    
     <div>
-        <table>
+
+        <div id="Toimikunta">
+            <h4>
+                Ota yhteyttä!
+            </h4>
+            <h6>
+                Apoptoositoimikunta:
+            </h6>
+            <h6>
+                apoptoosi@inkubio.fi
+            </h6>
+        </div>
+        {/* <table>
         <tbody>
         <tr>
             <td></td>
@@ -24,6 +37,10 @@ export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInform
             </td>
             <td></td>
         </tr>
+        </tbody>
+        </table> */}   
+        <table>
+        <tbody>
         <tr>
         {
         contacts.map(
@@ -40,5 +57,5 @@ export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInform
         </tr>
         </tbody>
         </table>
-        </div>
+    </div>
 );

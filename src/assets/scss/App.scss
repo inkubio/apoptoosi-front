@@ -4,18 +4,12 @@ $GOLD: #bdd836;
 $FontColor1: #36c;
 $FontColor2: #5c85d6;
 $FontColor: #24478f;
+$LargeFont: 4vw;
+$SmallFont: 3vw;
 
 @font-face {
   font-family: 'chelsea4';
   src: url("../fonts/Chelsea.ttf") format("truetype");
-}
-
-.dark {
-  color: $DARK;
-}
-
-.gold {
-  color: $GOLD;
 }
 
 html {
@@ -24,13 +18,15 @@ html {
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
+  // height: 100%;
+  // width: 100%;
 }
 
 main {
   width: 100%;
   // height: 95vh;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "heading"
     "countdown"
@@ -39,12 +35,25 @@ main {
     "ContactInformation";
   font-family: 'chelsea4', sans-serif;
   color: $FontColor;
+  min-height: 100vh;
+}
+
+#Toimikunta {
+  text-align: center;
+  font-size: $SmallFont;
 }
 
 .ContactInformation {
   margin: 0 auto;
   grid-area: ContactInformation;
+  // width: 100%;
+  font-size: $SmallFont;
+  text-align: center;
 }
+
+// table {
+//   width: 100%;
+// }
 
 .Title {
   text-align: center;
@@ -52,7 +61,7 @@ main {
 
 .Heading {
   grid-area: heading;
-  font-size: 5vw;
+  font-size: $LargeFont;
 }
 
 .SignupForm {
@@ -77,5 +86,6 @@ main {
 .Countdown {
   grid-area: countdown;
   text-align: center;
-  font-size: 5vw;
+  font-size: $LargeFont;
+  // height: 50%;
 }
