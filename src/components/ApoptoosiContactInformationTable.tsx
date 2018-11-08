@@ -11,11 +11,8 @@ export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInform
 
         <div id="Toimikunta">
             <h4>
-                Ota yhteyttä!
+                Contact us!
             </h4>
-            <h6>
-                Apoptoositoimikunta:
-            </h6>
             <h6>
                 apoptoosi@inkubio.fi
             </h6>
@@ -39,7 +36,7 @@ export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInform
         </tr>
         </tbody>
         </table> */}   
-        <table>
+        {/* <table>
         <tbody>
         <tr>
         {
@@ -56,6 +53,6 @@ export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInform
         }
         </tr>
         </tbody>
-        </table>
+        </table> */}
     </div>
 );

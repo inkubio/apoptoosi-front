@@ -95,9 +95,9 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
     return (
       <>
           <section>
-            <h1 className="Heading Title">Inkubio 15</h1>
-            <h1 className="Heading Title">Apoptoosi XV</h1>
-            <h2 className="Heading Title">2.3.2018</h2>
+            <h1 className="Title">Inkubio 15</h1>
+            <h1 className="Heading">Apoptoosi XV</h1>
+            <h2 className="Heading">2.3.2018</h2>
           </section>
           <section className="Countdown">
             <ApoptoosiCountdown />
@@ -105,29 +105,23 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           <section className="ContactInformation">
               <ApoptoosiContactInformationTable contacts={this.state.contacts}/>
           </section>
-          {/* {
-            if(new Date() >= this.startDate)
-            {
-              return(
-                <section className="SignupForm">
-                <ApoptoosiForm
-                  formFields={this.state.newRegisteration}
-                  onChange={this.handleChange}
-                  onSubmit={this.handleSubmit}
-                  />
-                </section>
+          
+              {/* <section className="SignupForm">
+              <ApoptoosiForm
+                formFields={this.state.newRegisteration}
+                onChange={this.handleChange}
+                onSubmit={this.handleSubmit}
+                />
+              </section>
 
-                <section className="RegisteredList">
-                <ApoptoosiList
-                  registerations={this.state.registerations}
-                  loading={this.state.loading}
-                  />
-                </section>
-            );
-            } else {
-              return null;
-            } 
-         } */}
+              <section className="RegisteredList">
+              <ApoptoosiList
+                registerations={this.state.registerations}
+                loading={this.state.loading}
+                />
+              </section> */}
+
+         
       </>
     );
   }
