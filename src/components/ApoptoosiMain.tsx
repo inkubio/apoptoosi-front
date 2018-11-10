@@ -4,13 +4,15 @@ import { ApoptoosiList } from './ApoptoosiList';
 import {ApoptoosiCountdown} from './ApoptoosiCountdown';
 import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
 import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
-
 import {
   Registeration,
   getRegisterations,
   postRegisteration,
+  postShirtOrder,
 } from '../utils/api';
 import { AnyMxRecord } from 'dns';
+import { ShirtOrder } from '../models/ShirtOrder';
+import { ApoptoosiShirtForm } from './ApoptoosiShirtForm';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -25,6 +27,8 @@ interface IApoptoosiState {
   contacts: IApoptoosiContactInformationProps[];
 
   startDate: Date;
+
+  newShirtOrder: ShirtOrder;
 }
 
 /** Main component for Apoptoosi website.
@@ -44,33 +48,41 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         alcohol: false,
         text: '',
       },
+      newShirtOrder: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        size: '',
+      },
       registerations: [],
       loading: true,
       contacts: [
-          {
-            name: "Linda Wederhorn",
-            email: "linda.wederhorn(ät)aalto.fi",
-            phoneNumber: "045 403 3693",
-          },      
-          {
-            name: "Eeva-Sofia Haukipuro",
-            email: "eeva-sofia.haukipuro(ät)aalto.fi",
-            phoneNumber: "040 089 5200‬",
-          },
-          {
-            name: "Milja Leinonen",
-            email: "milja.leinonen(ät)aalto.fi",
-            phoneNumber: "050 911 7088‬",
-          },
+          // {
+          //   name: "Linda Wederhorn",
+          //   email: "linda.wederhorn(ät)aalto.fi",
+          //   phoneNumber: "045 403 3693",
+          // },      
+          // {
+          //   name: "Eeva-Sofia Haukipuro",
+          //   email: "eeva-sofia.haukipuro(ät)aalto.fi",
+          //   phoneNumber: "040 089 5200‬",
+          // },
+          // {
+          //   name: "Milja Leinonen",
+          //   email: "milja.leinonen(ät)aalto.fi",
+          //   phoneNumber: "050 911 7088‬",
+          // },
         ],
         startDate: new Date("2019-01-20T16:00:00"),
       };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleRegisterationChange = this.handleRegisterationChange.bind(this);
+    this.handleRegisterationSubmit = this.handleRegisterationSubmit.bind(this);
+    this.handleShirtOrderSubmit = this.handleShirtOrderSubmit.bind(this);
+    this.handleShirtOrderChange = this.handleShirtOrderChange.bind(this);
   }
 
-  handleChange(event: any) {
+  handleRegisterationChange(event: any) {
     event.preventDefault();
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -82,10 +94,24 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
     });
   }
 
-  handleSubmit() {
+  handleShirtOrderChange(event: any) {
+    event.preventDefault();
+    const target = event.target;
+    const value = target.value;
+    this.setState({
+      newShirtOrder: {
+        [target.name]: value,
+      } as ShirtOrder, 
+    })
+  }
+
+  handleRegisterationSubmit() {
     postRegisteration(this.state.newRegisteration);
   }
 
+  handleShirtOrderSubmit() {
+    postShirtOrder(this.state.newShirtOrder);
+  }
   async componentDidMount() {
     const registerations = await getRegisterations();
     this.setState({ registerations, loading: false });
@@ -120,6 +146,13 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
                 loading={this.state.loading}
                 />
               </section> */}
+              <section className="ShirtOrder">
+                <ApoptoosiShirtForm 
+                  formFields={this.state.newShirtOrder}
+                  onChange={this.handleChange}
+                  onSubmit={this.handleShirtOrderSubmit}
+                />
+              </section>
 
          
       </>
