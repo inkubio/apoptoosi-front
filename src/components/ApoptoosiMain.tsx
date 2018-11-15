@@ -74,7 +74,13 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.submitGoogleForms = this.submitGoogleForms.bind(this);
   }
+
+  // submitGoogleForms(event: any, ref) {
+  //   console.log(event);
+  //   const formUrl = this.state.googleFormsUrl + '/formResponse';
+  // }
 
   handleChange(event: any) {
     event.preventDefault();
