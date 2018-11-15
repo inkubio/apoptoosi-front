@@ -4,6 +4,8 @@ import { ApoptoosiList } from './ApoptoosiList';
 import {ApoptoosiCountdown} from './ApoptoosiCountdown';
 import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
 import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
+import {ApoptoosiGoogleForms} from './ApoptoosiGoogleForms';
+
 
 import {
   Registeration,
@@ -25,6 +27,8 @@ interface IApoptoosiState {
   contacts: IApoptoosiContactInformationProps[];
 
   startDate: Date;
+
+  googleFormsUrl: string;
 }
 
 /** Main component for Apoptoosi website.
@@ -64,6 +68,8 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           },
         ],
         startDate: new Date("2019-01-20T16:00:00"),
+        googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?embedded=true",
+
       };
 
     this.handleChange = this.handleChange.bind(this);
@@ -97,7 +103,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           <section>
             <h1 className="Title">Inkubio 15</h1>
             <h1 className="Heading">Apoptoosi XV</h1>
-            <h2 className="Heading">2.3.2018</h2>
+            <h2 className="Heading">2.3.2019</h2>
           </section>
           <section className="Countdown">
             <ApoptoosiCountdown />
@@ -105,6 +111,10 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           <section className="ContactInformation">
               <ApoptoosiContactInformationTable contacts={this.state.contacts}/>
           </section>
+          <section className="GoogleForms">
+            <ApoptoosiGoogleForms url={this.state.googleFormsUrl} />
+          </section>
+
           
               {/* <section className="SignupForm">
               <ApoptoosiForm
