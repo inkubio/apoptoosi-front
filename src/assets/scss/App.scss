@@ -36,7 +36,8 @@ main {
     "countdown"
     // "signup"
     // "registrars"
-    "ContactInformation";
+    "ContactInformation"
+    "GoogleForms";
   font-family: 'chelsea4', sans-serif;
   color: $FontColor;
   min-height: 100vh;
@@ -102,5 +103,10 @@ main {
 }
 
 .GoogleForms {
-  align-content: center;
+  grid-area: GoogleForms;
+  text-align: left;
+  color: green;
+  grid-template-columns: auto auto;
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 }
