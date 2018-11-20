@@ -3,6 +3,7 @@ $DARK: #1a0826;
 $GOLD: #bdd836;
 $FontColor1: #36c;
 $FontColor2: #5c85d6;
+$FontColor3: #8aa9ff44;
 $FontColor: #24478f;
 $ExtraLargeFont: 12vh;
 $LargeFont: 4vh;
@@ -105,8 +106,79 @@ main {
 .GoogleForms {
   grid-area: GoogleForms;
   text-align: left;
-  color: green;
+  // color: green;
   grid-template-columns: auto auto;
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: $FontColor;
+  font-family: 'neutra', sans-serif;
+  font-size: 1.5rem;
+
+  input {
+    background-color: $FontColor3;
+  }
+}
+
+.form {
+  align-self: center;
+}
+
+//From Vincent Durant at https://www.designrush.com/resources/designskilz/
+.button {
+  background: #1aab8a;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.6em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+.button:hover {
+  background: #fff;
+  color: #1aab8a;
+}
+
+.button::before,
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1aabba;
+  transition: 400ms ease all;
+}
+
+.button::after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.button:hover::before,
+.button:hover::after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  font-size: $SmallFont;
+}
+
+.nav-list-item {
+  display: block;
+  padding: 2rem;
 }

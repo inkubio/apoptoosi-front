@@ -5,14 +5,15 @@ import {ApoptoosiCountdown} from './ApoptoosiCountdown';
 import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
 import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
 import {ApoptoosiGoogleForms} from './ApoptoosiGoogleForms';
-
-
+// import {NavLink} from 'react-router-dom';
+// import {BrowserRouter} from 'react-router-dom';
 import {
   Registeration,
   getRegisterations,
   postRegisteration,
 } from '../utils/api';
 import { AnyMxRecord } from 'dns';
+import {ApoptoosiLinks} from './ApoptoosiLinks';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -29,6 +30,8 @@ interface IApoptoosiState {
   startDate: Date;
 
   googleFormsUrl: string;
+
+  linkUrls: string[];
 }
 
 /** Main component for Apoptoosi website.
@@ -69,7 +72,13 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         ],
         startDate: new Date("2019-01-20T16:00:00"),
         // googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?embedded=true",
-        googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g"
+        googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g",
+        linkUrls: [
+          "year",
+          "Apoptoosi",
+          "form",
+          "contact",
+        ]
       };
 
     this.handleChange = this.handleChange.bind(this);
@@ -108,6 +117,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
       <>
           <section>
             <h1 className="Title">Inkubio 15</h1>
+            <ApoptoosiLinks urls={this.state.linkUrls} />
             <h1 className="Heading">Apoptoosi XV</h1>
             <h2 className="Heading">2.3.2019</h2>
           </section>

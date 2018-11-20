@@ -26,7 +26,7 @@ export const ApoptoosiGoogleForms: React.SFC<IApoptoosiGoogleFormsProps> = ({url
         <form className="form" action={url + '/formResponse'} target="noLooktarget" id="kollariform">
             {/* <p>{url}</p> */}
             <fieldset>
-                <legend>Paita tilaus</legend>
+                <legend>Paitatilaus</legend>
             <table>
                 <tr>
                     <td>
@@ -59,9 +59,15 @@ export const ApoptoosiGoogleForms: React.SFC<IApoptoosiGoogleFormsProps> = ({url
                         </select>
                     </td>
                 </tr>
-                <li>
-                    <input type="submit" value="Lähetä" />
-                </li>
+                <tr>
+                    <input type="submit" className="button" value="Lähetä" />
+                </tr>
+                <tr><td></td>
+                    <td>
+                    <a href="http://www.fruitoftheloom.eu/product/62-202-0">Tarkemmat koot</a>
+                    </td>
+                    <td></td>
+                </tr>
             </table>
             </fieldset>
         </form>
