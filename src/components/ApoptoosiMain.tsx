@@ -16,6 +16,8 @@ import { AnyMxRecord } from 'dns';
 import {ApoptoosiLinks} from './ApoptoosiLinks';
 import {ApoptoosiFooter} from './ApoptoosiFooter';
 import { setMaxListeners } from 'cluster';
+import { ApoptoosiCelebYear } from './ApoptoosiCelebYear';
+import {ApoptoosiApoptoosiXv} from './ApoptoosiApoptoosiXv';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -80,7 +82,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g",
         linkUrls: [
           "Juhlavuosi",
-          "Apoptoosi XV",
+          "ApoptoosiXV",
           "Ilmoittautuminen",
           "Yhteystiedot",
         ],
@@ -138,13 +140,19 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <ApoptoosiCountdown />
             <ApoptoosiLinks urls={this.state.linkUrls} />
           </section>
-          <section className="celebYear"></section>
-          <section className="apoptoosiXV"></section>
+          <section id="Juhlavuosi" className="celebYear">
+            <ApoptoosiCelebYear />
+          </section>
 
-          <section className="ContactInformation">
+          <section id="ApoptoosiXV" className="apoptoosiXV">
+            <ApoptoosiApoptoosiXv />
+          </section>
+
+          <section id="Yhteystiedot" className="ContactInformation">
               <ApoptoosiContactInformationTable contacts={this.state.contacts}/>
           </section>
-          <section className="GoogleForms">
+          
+          <section id="Ilmoittautuminen" className="GoogleForms">
             {/* <ApoptoosiGoogleForms url={this.state.googleFormsUrl} /> */}
             {/* <span><a className="ToosaLink" href="https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?usp=sf_link">Shirt order!</a></span> */}
             {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?usp=sf_link"></iframe> */}
