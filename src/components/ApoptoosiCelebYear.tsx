@@ -6,7 +6,7 @@ export const ApoptoosiCelebYear = () => {
         <div>
             <h1>Juhlavuosi</h1>
             <h3>Inkubio15-paita</h3>
-            <p>
+            <p className="bulkText">
             Aalto-yliopiston bioinformaatioteknologian ainejärjestö 
             Inkubio täyttää 15 vuotta vuonna 2019. Tätä merkittävää 
             tapahtumaa juhlistetaan 2.3. Inkubion vuosijuhlissa, 

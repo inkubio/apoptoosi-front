@@ -5,7 +5,7 @@ export const ApoptoosiApoptoosiXv = () => {
     return (
     <>
         <h1>Apoptoosi XV</h1>
-        <p>
+        <p className="bulkText">
             Vuosijuhla on killan tapahtumista hienoin ja juhlallisin. 
             Inkubion 15. vuosijuhlia vietetään lauantaina 2.3.
 
