@@ -60,7 +60,7 @@ export const ApoptoosiGoogleForms: React.SFC<IApoptoosiGoogleFormsProps> = ({url
                     </td>
                 </tr>
                 <tr>
-                    <input type="submit" className="button" value="Lähetä" />
+                    <FormInput />
                 </tr>
                 <tr><td></td>
                     <td>
@@ -73,4 +73,14 @@ export const ApoptoosiGoogleForms: React.SFC<IApoptoosiGoogleFormsProps> = ({url
         </form>
         </>
     );
+}
+
+const FormInput = () => {
+    const handle = () => {
+        alert('Tilaus vastaanotettu!');
+    }
+    return (
+        <input type="submit" className="button" value="Lähetä" onClick={handle}/>
+
+    )
 }

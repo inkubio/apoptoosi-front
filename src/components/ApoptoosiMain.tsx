@@ -14,6 +14,8 @@ import {
 } from '../utils/api';
 import { AnyMxRecord } from 'dns';
 import {ApoptoosiLinks} from './ApoptoosiLinks';
+import {ApoptoosiFooter} from './ApoptoosiFooter';
+import { setMaxListeners } from 'cluster';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -32,6 +34,9 @@ interface IApoptoosiState {
   googleFormsUrl: string;
 
   linkUrls: string[];
+
+  footerImageLinks: string[];
+
 }
 
 /** Main component for Apoptoosi website.
@@ -74,11 +79,20 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         // googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?embedded=true",
         googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g",
         linkUrls: [
-          "year",
-          "Apoptoosi",
-          "form",
-          "contact",
+          "Juhlavuosi",
+          "Apoptoosi XV",
+          "Ilmoittautuminen",
+          "Yhteystiedot",
+        ],
+
+        footerImageLinks: [
+          "../src/assets/img/Philips_logo_new.svg",
+          "../src/assets/img/AW_logo_main_version_RGB.svg",
+          "../src/assets/img/Copy_of_futurice-logo-green.svg",
+          "../src/assets/img/Planmeca_logo.png",
+          "../src/assets/img/RemoteA_logo.svg",
         ]
+
       };
 
     this.handleChange = this.handleChange.bind(this);
@@ -117,18 +131,23 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
       <>
           <section>
             <h1 className="Title">Inkubio 15</h1>
-            <ApoptoosiLinks urls={this.state.linkUrls} />
             <h1 className="Heading">Apoptoosi XV</h1>
             <h2 className="Heading">2.3.2019</h2>
           </section>
           <section className="Countdown">
             <ApoptoosiCountdown />
+            <ApoptoosiLinks urls={this.state.linkUrls} />
           </section>
+          <section className="celebYear"></section>
+          <section className="apoptoosiXV"></section>
+
           <section className="ContactInformation">
               <ApoptoosiContactInformationTable contacts={this.state.contacts}/>
           </section>
           <section className="GoogleForms">
-            <ApoptoosiGoogleForms url={this.state.googleFormsUrl} />
+            {/* <ApoptoosiGoogleForms url={this.state.googleFormsUrl} /> */}
+            {/* <span><a className="ToosaLink" href="https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?usp=sf_link">Shirt order!</a></span> */}
+            {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?usp=sf_link"></iframe> */}
           </section>
 
           
@@ -147,7 +166,9 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
                 />
               </section> */}
 
-         
+         <section className="Footer">
+              <ApoptoosiFooter urls={this.state.footerImageLinks}/>
+         </section>
       </>
     );
   }
