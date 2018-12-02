@@ -2,8 +2,8 @@ POST http://localhost:5000/api/RegistrationData/CreateRegistration
 Content-Type: application/json
 
 {
-    "firstName": "TestiEka",
-    "lastName": "TestiToke",
+    "firstName": "TestiToka",
+    "lastName": "Testikolmas",
     "email": "vituttaa@inkubio.fi",
     "seatingGroup": "Gambiina",
     "alcohol": true,
