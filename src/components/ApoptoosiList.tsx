@@ -20,7 +20,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
   loading,
 }) => (
   <>
-    <h2 className="Title">Registered attendees</h2>
+    <h3>Registered attendees</h3>
     {loading ? (
       <p>
         <em>Loading...</em>

@@ -159,7 +159,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           </section>
 
           
-              {/* <section className="SignupForm">
+           <section className="SignupForm">
               <ApoptoosiForm
                 formFields={this.state.newRegisteration}
                 onChange={this.handleChange}
@@ -172,7 +172,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
                 registerations={this.state.registerations}
                 loading={this.state.loading}
                 />
-              </section> */}
+              </section>
 
          <section className="Footer">
               <ApoptoosiFooter urls={this.state.footerImageLinks}/>
