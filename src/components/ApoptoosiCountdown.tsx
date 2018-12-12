@@ -15,7 +15,7 @@ export class ApoptoosiCountdown extends React.Component<{}, IApoptoosiCountdown>
         super(props);
 
         this.state = {
-            startDate: new Date(2019, 3, 2, 15, 0, 0, 0),
+            startDate: new Date(2019, 2, 2, 15, 0, 0, 0),
             currentDate: new Date(),
         };
         this.tick = this.tick.bind(this);
@@ -36,16 +36,25 @@ export class ApoptoosiCountdown extends React.Component<{}, IApoptoosiCountdown>
 
     getDateString(){
         const diffDate = this.state.startDate.getTime() - this.state.currentDate.getTime();
+        //diffDate is in milliseconds
         var seconds = Math.floor(diffDate / 1000);
-        
-        const days = Math.floor(seconds / (3600 * 24));
-        seconds -= days * 3600 * 24;
+        // 60 seconds * 60 * 24
+        const days = Math.floor(seconds / (60 * 60 * 24));
+        // Take calculated days from the seconds
+        seconds -= days * 60 * 60 * 24;
+        // Get hours from seconds
         const hours = Math.floor(seconds / 3600);
+        // Take hours from seconds
         seconds -= hours * 3600;
-        var minutes = Math.floor(seconds / 60);
+        // Calculate minutes 
+        const minutes = Math.floor(seconds / 60);
+        // Take minutes from seconds
         seconds -= minutes * 60;
-
-        return `${days}:${hours < 10 ? "0" + JSON.stringify(hours) : JSON.stringify(hours)}:${minutes < 10 ? "0" + JSON.stringify(minutes) : JSON.stringify(minutes)}:${seconds < 10 ? "0" + JSON.stringify(seconds) : JSON.stringify(seconds)}`;
+        // Stringify results
+        return `${days < 10 ? "0" + JSON.stringify(days) : JSON.stringify(days)}:
+                ${hours < 10 ? "0" + JSON.stringify(hours) : JSON.stringify(hours)}:
+                ${minutes < 10 ? "0" + JSON.stringify(minutes) : JSON.stringify(minutes)}:
+                ${seconds < 10 ? "0" + JSON.stringify(seconds) : JSON.stringify(seconds)}`;
     }
 
     render(){
