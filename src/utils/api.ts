@@ -40,7 +40,7 @@ export const getRegisterations = async (): Promise<Registeration[]> => {
 export const postRegisteration = async (
   registerationData: Registeration,
 ): Promise<null> => {
-  console.log(JSON.stringify(registerationData, null, 4));
+  // console.log(JSON.stringify(registerationData, null, 4));
 
   console.log(registerationData.firstName);
   console.log(registerationData.lastName);
@@ -49,7 +49,7 @@ export const postRegisteration = async (
   console.log(registerationData.alcohol);
   console.log(registerationData.text);
 
-  alert(JSON.stringify(registerationData, null, 4));
+  // alert(JSON.stringify(registerationData, null, 4));
   // console.log(JSON.stringify(registerationData, null, 4));console.log(JSON.stringify(registerationData, null, 4));
   
 
@@ -66,6 +66,8 @@ export const postRegisteration = async (
         body: JSON.stringify(registerationData),
       },
     );
-  } catch (e) {}
+  } catch (e) {
+    alert('Failure to fetch with error ' + e);
+  }
   return null;
 };
