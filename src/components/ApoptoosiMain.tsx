@@ -107,7 +107,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
   //   const formUrl = this.state.googleFormsUrl + '/formResponse';
   // }
 
-  async handleChange(event: any) {
+  handleChange(event: any) {
     event.preventDefault();
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -115,7 +115,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
     var newReg: Registeration = this.state.newRegisteration;
     newReg[target.name] = value;
 
-    await this.setState({
+    this.setState({
       newRegisteration: newReg, 
     });
     // console.log(this.state.newRegisteration);

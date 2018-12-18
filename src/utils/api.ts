@@ -42,12 +42,12 @@ export const postRegisteration = async (
 ): Promise<null> => {
   // console.log(JSON.stringify(registerationData, null, 4));
 
-  console.log(registerationData.firstName);
-  console.log(registerationData.lastName);
-  console.log(registerationData.email);
-  console.log(registerationData.seatingGroup);
-  console.log(registerationData.alcohol);
-  console.log(registerationData.text);
+  // console.log(registerationData.firstName);
+  // console.log(registerationData.lastName);
+  // console.log(registerationData.email);
+  // console.log(registerationData.seatingGroup);
+  // console.log(registerationData.alcohol);
+  // console.log(registerationData.text);
 
   // alert(JSON.stringify(registerationData, null, 4));
   // console.log(JSON.stringify(registerationData, null, 4));console.log(JSON.stringify(registerationData, null, 4));
