@@ -61,21 +61,21 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
       registerations: [],
       loading: true,
       contacts: [
-          {
-            name: "Linda Wederhorn",
-            email: "linda.wederhorn(ät)aalto.fi",
-            phoneNumber: "045 403 3693",
-          },      
-          {
-            name: "Eeva-Sofia Haukipuro",
-            email: "eeva-sofia.haukipuro(ät)aalto.fi",
-            phoneNumber: "040 089 5200‬",
-          },
-          {
-            name: "Milja Leinonen",
-            email: "milja.leinonen(ät)aalto.fi",
-            phoneNumber: "050 911 7088‬",
-          },
+          // {
+          //   name: "Linda Wederhorn",
+          //   email: "linda.wederhorn(ät)aalto.fi",
+          //   phoneNumber: "045 403 3693",
+          // },      
+          // {
+          //   name: "Eeva-Sofia Haukipuro",
+          //   email: "eeva-sofia.haukipuro(ät)aalto.fi",
+          //   phoneNumber: "040 089 5200‬",
+          // },
+          // {
+          //   name: "Milja Leinonen",
+          //   email: "milja.leinonen(ät)aalto.fi",
+          //   phoneNumber: "050 911 7088‬",
+          // },
         ],
         startDate: new Date("2019-01-20T16:00:00"),
         // googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?embedded=true",

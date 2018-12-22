@@ -51,10 +51,7 @@ export class ApoptoosiCountdown extends React.Component<{}, IApoptoosiCountdown>
         // Take minutes from seconds
         seconds -= minutes * 60;
         // Stringify results
-        return `${days < 10 ? "0" + JSON.stringify(days) : JSON.stringify(days)}:
-                ${hours < 10 ? "0" + JSON.stringify(hours) : JSON.stringify(hours)}:
-                ${minutes < 10 ? "0" + JSON.stringify(minutes) : JSON.stringify(minutes)}:
-                ${seconds < 10 ? "0" + JSON.stringify(seconds) : JSON.stringify(seconds)}`;
+        return `${days < 10 ? "0" + JSON.stringify(days) : JSON.stringify(days)}:${hours < 10 ? "0" + JSON.stringify(hours) : JSON.stringify(hours)}:${minutes < 10 ? "0" + JSON.stringify(minutes) : JSON.stringify(minutes)}:${seconds < 10 ? "0" + JSON.stringify(seconds) : JSON.stringify(seconds)}`;
     }
 
     render(){
