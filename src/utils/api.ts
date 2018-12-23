@@ -40,34 +40,34 @@ export const getRegisterations = async (): Promise<Registeration[]> => {
 export const postRegisteration = async (
   registerationData: Registeration,
 ): Promise<null> => {
-  // console.log(JSON.stringify(registerationData, null, 4));
 
-  // console.log(registerationData.firstName);
-  // console.log(registerationData.lastName);
-  // console.log(registerationData.email);
-  // console.log(registerationData.seatingGroup);
-  // console.log(registerationData.alcohol);
-  // console.log(registerationData.text);
-
-  // alert(JSON.stringify(registerationData, null, 4));
-  // console.log(JSON.stringify(registerationData, null, 4));console.log(JSON.stringify(registerationData, null, 4));
-  
-
-  
   try {
     const resp = await fetch(
       `${API_URL}/api/RegistrationData/CreateRegistration`,
       {
         headers: {
-          Connection: 'keep-alive',
+          'Connection': 'keep-alive',
           'Content-Type': 'application/json',
         },
         method: 'POST',
         body: JSON.stringify(registerationData),
       },
     );
+    // await fetch(
+    //   `${API_URL}/api/RegistrationData/CreateRegistration`,
+    //   {
+    //     headers: {
+    //       'Connection': 'keep-alive',
+    //       'Content-Type': 'application/json',
+    //     },
+    //     method: 'POST',
+    //     body: JSON.stringify(registerationData),
+    //   },
+    // );
+    // console.log(resp);
+
   } catch (e) {
-    alert('Failure to fetch with error ' + e);
+    // console.log('Failure to fetch with error ' + e); 
   }
   return null;
 };

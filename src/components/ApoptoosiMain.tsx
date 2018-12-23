@@ -73,11 +73,11 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         ],
 
         footerImageLinks: [
+          "../src/assets/img/RemoteA_logo.svg",
           "../src/assets/img/Philips_logo_new.svg",
           "../src/assets/img/AW_logo_main_version_RGB.svg",
           "../src/assets/img/Copy_of_futurice-logo-green.svg",
           "../src/assets/img/Planmeca_logo.png",
-          "../src/assets/img/RemoteA_logo.svg",
         ]
 
       };
@@ -115,6 +115,9 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
     this.setState({ registerations, loading: false });
   }
 
+
+
+
   render() {
     return (
       <>
@@ -127,11 +130,11 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <ApoptoosiCountdown />
             <ApoptoosiLinks urls={this.state.linkUrls} />
           </section>
-          <section id="Juhlavuosi" className="celebYear">
+          <section id="Juhlavuosi" className="CelebYear">
             <ApoptoosiCelebYear />
           </section>
 
-          <section id="ApoptoosiXV" className="apoptoosiXV">
+          <section id="ApoptoosiXV" className="ApoptoosiXV">
             <ApoptoosiApoptoosiXv />
           </section>
 

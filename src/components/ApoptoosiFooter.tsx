@@ -5,39 +5,33 @@ interface IApoptoosiFooter {
     urls: string[];
 
 }
+// The RemoteA is first in a list of strings
 
 export const ApoptoosiFooter: React.SFC<IApoptoosiFooter> = ({urls}) => {
 
-    const urlsTuples = parseUrls(urls);
+    // const urlsTuples = parseUrls(urls);
 
     return(
         <>
-        <h1>Juhlavuotta tukemassa:</h1>
         <footer>
-            <table className="footerTable">
+            <div className="MainSponsor">
+                <h1>Pääyhteistyökumppani</h1>
+                <img src={urls[0]}></img>
+            </div>
+            <section className="SponsorFooter">
+            <h1>Juhlavuotta tukemassa</h1>
             {
-                
-                urlsTuples.map(
+                // Take all but first
+                urls.slice(1).map(
                     elem => {
                         return(
-                            <tr>
-                                <td>
-                                    <img className="footerImage" src={elem.first}></img>
-                                </td>
-                                <td>
-                                    <img className="footerImage" src={elem.second}></img>
-                                </td>
-                            </tr>
+                                // <img className="footerImage" src={elem}></img>
+                                <img src={elem}></img>
                             )
                     }
                 )
             }
-            <tr>
-                <td>
-                    <img className="footerImage" src={urls[-1]}></img>
-                </td>
-            </tr>
-            </table>
+            </section>
         </footer>                
     </>
     );

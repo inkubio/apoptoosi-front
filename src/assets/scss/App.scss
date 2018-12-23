@@ -5,7 +5,9 @@ $FontColor1: #36c;
 $FontColor2: #5c85d6;
 $FontColor3: #8aa9ff44;
 $FontColor: #24478f;
+$ContentBackgroundColor: #fff8;
 $InputBackgroundColor: #fff8;
+$PaddingValue: 15px;
 $ExtraLargeFont: 12vh;
 $LargeFont: 4vh;
 $SmallFont: 3vh;
@@ -29,10 +31,10 @@ html {
 }
 
 main {
-  width: 100%;
-  // height: 95vh;
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto;
+  grid-template-columns: 80vw;
+  justify-content: center;
   grid-template-areas:
     "heading"
     "countdown"
@@ -63,10 +65,14 @@ main {
 
 .CelebYear {
   grid-area: CelebYear;
+  background-color: $ContentBackgroundColor;
+  padding: $PaddingValue;
 }
 
 .ApoptoosiXV {
   grid-area: ApoptoosiXV;
+  background-color: $ContentBackgroundColor;
+  padding: $PaddingValue;
 }
 
 .bulkText {
@@ -81,7 +87,7 @@ main {
   text-align: center;
   padding-top: 5vh;
   font-size: $ExtraLargeFont;
-  letter-spacing: 15px;
+  letter-spacing: $PaddingValue;
 }
 
 .Heading {
@@ -94,6 +100,8 @@ main {
 
 .SignupForm {
   grid-area: signup;
+  background-color: $ContentBackgroundColor;
+  padding: $PaddingValue;
 }
 
 .Signup {
@@ -110,6 +118,8 @@ main {
 
 .RegisteredList {
   grid-area: registrars;
+  background-color: $ContentBackgroundColor;
+  padding: $PaddingValue;
 }
 
 .Countdown {
@@ -236,4 +246,53 @@ main {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.MainSponsor {
+  // display: flex;
+  // display: block;
+  column-count: 1;
+  column-width: 100vw;
+  // justify-content: center;
+  text-align: center;
+  // align-items: center;
+
+  img {
+    // max-width: 100vw !important;
+    // height: auto !important;
+    max-width: 50vw;
+    justify-content: center;
+    display: inline-block;
+  }
+
+  h1 {
+    column-span: all;
+  }
+}
+
+.SponsorFooter {
+  // flex: 25;
+  // display: flex;
+  // flex-wrap: wrap;
+  // max-width: 25%;
+  column-count: 4;
+  column-width: 50vw;
+  text-align: center;
+
+  img {
+    // flex: 25%;
+    max-width: 50vw !important;
+    height: auto !important;
+    justify-content: center;
+    display: inline-block;
+  }
+
+  h1 {
+    column-span: all;
+  }
+}
+
+.FooterTitle {
+  text-align: center;
 }
