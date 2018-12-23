@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { ApoptoosiForm } from './ApoptoosiForm';
-import { ApoptoosiList } from './ApoptoosiList';
+// import { ApoptoosiForm } from './ApoptoosiForm';
+// import { ApoptoosiList } from './ApoptoosiList';
 import {ApoptoosiCountdown} from './ApoptoosiCountdown';
-import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
+// import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
 import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
-import {ApoptoosiGoogleForms} from './ApoptoosiGoogleForms';
+// import {ApoptoosiGoogleForms} from './ApoptoosiGoogleForms';
 // import {NavLink} from 'react-router-dom';
 // import {BrowserRouter} from 'react-router-dom';
 import {
@@ -16,8 +16,9 @@ import { AnyMxRecord } from 'dns';
 import {ApoptoosiLinks} from './ApoptoosiLinks';
 import {ApoptoosiFooter} from './ApoptoosiFooter';
 import { setMaxListeners } from 'cluster';
-import { ApoptoosiCelebYear } from './ApoptoosiCelebYear';
-import {ApoptoosiApoptoosiXv} from './ApoptoosiApoptoosiXv';
+
+import {ApoptoosiDefaultPage} from './ApoptoosiDefaultPage';
+import {ApoptoosiRegisterationPage} from './ApoptoosiRegisterationPage';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -38,6 +39,8 @@ interface IApoptoosiState {
   linkUrls: string[];
 
   footerImageLinks: string[];
+  // false === the normal page true === registeration page
+  page: boolean;
 
 }
 
@@ -78,7 +81,9 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           "../src/assets/img/AW_logo_main_version_RGB.svg",
           "../src/assets/img/Copy_of_futurice-logo-green.svg",
           "../src/assets/img/Planmeca_logo.png",
-        ]
+        ],
+
+        page: false,
 
       };
 
@@ -115,8 +120,19 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
     this.setState({ registerations, loading: false });
   }
 
+  changePage = () => {
+    event.preventDefault();
+    this.setState({page: !this.state.page});
+  }
 
-
+  renderApoptoosiPage = () => {
+    if(this.state.page) {
+      return <ApoptoosiRegisterationPage />
+    }
+    else {
+      return <ApoptoosiDefaultPage />
+    }
+  }
 
   render() {
     return (
@@ -130,40 +146,9 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <ApoptoosiCountdown />
             <ApoptoosiLinks urls={this.state.linkUrls} />
           </section>
-          <section id="Juhlavuosi" className="CelebYear">
-            <ApoptoosiCelebYear />
-          </section>
-
-          <section id="ApoptoosiXV" className="ApoptoosiXV">
-            <ApoptoosiApoptoosiXv />
-          </section>
-
-          <section id="Yhteystiedot" className="ContactInformation">
-              <ApoptoosiContactInformationTable contacts={this.state.contacts}/>
-          </section>
-          
-          <section id="Ilmoittautuminen" className="GoogleForms">
-            {/* <ApoptoosiGoogleForms url={this.state.googleFormsUrl} /> */}
-            {/* <span><a className="ToosaLink" href="https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?usp=sf_link">Shirt order!</a></span> */}
-            {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?usp=sf_link"></iframe> */}
-          </section>
-
-          
-           <section className="SignupForm">
-              <ApoptoosiForm
-                formFields={this.state.newRegisteration}
-                onChange={this.handleChange}
-                onSubmit={this.handleSubmit}
-                />
-              </section>
-
-              <section className="RegisteredList">
-              <ApoptoosiList
-                registerations={this.state.registerations}
-                loading={this.state.loading}
-                />
-              </section>
-
+          {
+            this.renderApoptoosiPage()
+          }
          <section className="Footer">
               <ApoptoosiFooter urls={this.state.footerImageLinks}/>
          </section>

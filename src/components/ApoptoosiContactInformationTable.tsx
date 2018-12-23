@@ -2,7 +2,7 @@ import * as React from 'react';
 import {ApoptoosiContactInformation, IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
 
 interface IApoptoosiContactInformationTableProps {
-    contacts: IApoptoosiContactInformationProps[];
+    // contacts: IApoptoosiContactInformationProps[];
 }
 
 export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInformationTableProps> = ({contacts}) => (

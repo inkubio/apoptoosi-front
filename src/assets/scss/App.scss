@@ -41,9 +41,8 @@ main {
     "CelebYear"
     "ApoptoosiXV"
     "signup"
-    "registrars"
-    "ContactInformation"
-    "GoogleForms";
+    "registerations"
+    "ContactInformation";
   font-family: 'chelsea4', sans-serif;
   line-height: 150%;
   color: $FontColor;
@@ -118,7 +117,7 @@ main {
 }
 
 .RegisteredList {
-  grid-area: registrars;
+  grid-area: registerations;
   background-color: $ContentBackgroundColor;
   padding: $PaddingValue;
 }
