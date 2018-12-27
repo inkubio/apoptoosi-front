@@ -1,7 +1,9 @@
 import * as React from 'react';
 
 
-export const ApoptoosiCelebYear = () => {
+
+export const ApoptoosiCelebYear = ({language}) => {
+    if(language)
     return(
         <div>
             <h1>Juhlavuosi</h1>

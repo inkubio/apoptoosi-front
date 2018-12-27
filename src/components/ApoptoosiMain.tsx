@@ -42,7 +42,7 @@ interface IApoptoosiState {
 
   footerImageLinks: string[];
   // false === the normal page true === registeration page *DEPRECATED*
-  page: boolean;
+  language: boolean;
 
 }
 
@@ -84,52 +84,18 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           "../src/assets/img/Copy_of_futurice-logo-green.svg",
           "../src/assets/img/Planmeca_logo.png",
         ],
-
-        page: false,
+        //Finnish is the default language
+        language: true,
 
       };
 
-    // this.handleChange = this.handleChange.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    // this.changePage = this.changePage.bind(this);
-    // this.submitGoogleForms = this.submitGoogleForms.bind(this);
   }
 
-  // submitGoogleForms(event: any, ref) {
-  //   console.log(event);
-  //   const formUrl = this.state.googleFormsUrl + '/formResponse';
-  // }
-
-  // handleChange(event: any) {
-  //   event.preventDefault();
-  //   const target = event.target;
-  //   const value = target.type === 'checkbox' ? target.checked : target.value;
-  //   // React cannot handle nested objects very well. We shall create a dummy object to update.
-  //   var newReg: Registeration = this.state.newRegisteration;
-  //   newReg[target.name] = value;
-
-  //   this.setState({
-  //     newRegisteration: newReg, 
-  //   });
-  //   // console.log(this.state.newRegisteration);
-  // }
-
-  // handleSubmit() {
-  //   postRegisteration(this.state.newRegisteration);
-  // }
-
-  // async componentDidMount() {
-  //   const registerations = await getRegisterations();
-  //   this.setState({ registerations, loading: false });
-  // }
-
-  // changePage = () => {
-  //   event.preventDefault();
-  //   const val: boolean = !this.state.page;
-  //   this.setState({
-  //     page: val,
-  //   });
-  // }
+  changelanguage() {
+    this.setState({
+      language: !this.state.language
+    })
+  }
 
 
   render() {
@@ -149,7 +115,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <div>
             <ApoptoosiLinks /*urls={this.state.linkUrls} changePage={this.changePage}*//>
 
-            <Route exact path="/" render={() => <ApoptoosiDefaultPage />} />
+            <Route exact path="/" render={() => <ApoptoosiDefaultPage language={this.state.language} /> }/>
             <Route exact path="/registeration" render={() => <ApoptoosiRegisterationPage />} />
             </div>
           </Router>

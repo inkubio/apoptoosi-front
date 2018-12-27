@@ -4,21 +4,25 @@ import {ApoptoosiCelebYear} from './ApoptoosiCelebYear';
 import {ApoptoosiApoptoosiXv} from './ApoptoosiApoptoosiXv';
 import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
 
-export const ApoptoosiDefaultPage: React.SFC = () => {
+interface IApoptoosiDefaultPage {
+    language: boolean;
+}
+
+export const ApoptoosiDefaultPage: React.SFC<IApoptoosiDefaultPage> = (language) => {
 
         return(
-            <>
+            <div id="ApoptoosiDefaultPage">
                 <section id="Juhlavuosi" className="CelebYear">
-                    <ApoptoosiCelebYear />
+                    <ApoptoosiCelebYear language={language} />
                 </section>
         
                 <section id="ApoptoosiXV" className="ApoptoosiXV">
-                    <ApoptoosiApoptoosiXv />
+                    <ApoptoosiApoptoosiXv language={language} />
                 </section>
         
                 <section id="Yhteystiedot" className="ContactInformation">
-                    <ApoptoosiContactInformationTable />
+                    <ApoptoosiContactInformationTable language={language} />
                 </section>
-            </>
+            </div>
           );
 }
