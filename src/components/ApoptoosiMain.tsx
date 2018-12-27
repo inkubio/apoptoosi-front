@@ -41,7 +41,7 @@ interface IApoptoosiState {
   linkUrls: string[];
 
   footerImageLinks: string[];
-  // false === the normal page true === registeration page
+  // false === the normal page true === registeration page *DEPRECATED*
   page: boolean;
 
 }
@@ -149,8 +149,8 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <div>
             <ApoptoosiLinks /*urls={this.state.linkUrls} changePage={this.changePage}*//>
 
-            <Route path="/" render={() => {<ApoptoosiDefaultPage />}} />
-            <Route path="/registeration" render={() => {<ApoptoosiRegisterationPage />}} />
+            <Route exact path="/" render={() => <ApoptoosiDefaultPage />} />
+            <Route exact path="/registeration" render={() => <ApoptoosiRegisterationPage />} />
             </div>
           </Router>
 

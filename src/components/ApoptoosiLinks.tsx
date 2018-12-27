@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
+import {HashLink as Link} from 'react-router-hash-link';
 interface IApoptoosiLinksProps {
     
     // urls: string[];
