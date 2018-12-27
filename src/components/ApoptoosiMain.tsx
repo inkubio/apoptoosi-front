@@ -1,6 +1,6 @@
 import * as React from 'react';
-// import { ApoptoosiForm } from './ApoptoosiForm';
-// import { ApoptoosiList } from './ApoptoosiList';
+import { ApoptoosiForm } from './ApoptoosiForm';
+import { ApoptoosiList } from './ApoptoosiList';
 import {ApoptoosiCountdown} from './ApoptoosiCountdown';
 // import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
 import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
@@ -19,6 +19,8 @@ import { setMaxListeners } from 'cluster';
 
 import {ApoptoosiDefaultPage} from './ApoptoosiDefaultPage';
 import {ApoptoosiRegisterationPage} from './ApoptoosiRegisterationPage';
+
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -87,8 +89,9 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
 
       };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
+    // this.changePage = this.changePage.bind(this);
     // this.submitGoogleForms = this.submitGoogleForms.bind(this);
   }
 
@@ -97,42 +100,37 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
   //   const formUrl = this.state.googleFormsUrl + '/formResponse';
   // }
 
-  handleChange(event: any) {
-    event.preventDefault();
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    // React cannot handle nested objects very well. We shall create a dummy object to update.
-    var newReg: Registeration = this.state.newRegisteration;
-    newReg[target.name] = value;
+  // handleChange(event: any) {
+  //   event.preventDefault();
+  //   const target = event.target;
+  //   const value = target.type === 'checkbox' ? target.checked : target.value;
+  //   // React cannot handle nested objects very well. We shall create a dummy object to update.
+  //   var newReg: Registeration = this.state.newRegisteration;
+  //   newReg[target.name] = value;
 
-    this.setState({
-      newRegisteration: newReg, 
-    });
-    // console.log(this.state.newRegisteration);
-  }
+  //   this.setState({
+  //     newRegisteration: newReg, 
+  //   });
+  //   // console.log(this.state.newRegisteration);
+  // }
 
-  handleSubmit() {
-    postRegisteration(this.state.newRegisteration);
-  }
+  // handleSubmit() {
+  //   postRegisteration(this.state.newRegisteration);
+  // }
 
-  async componentDidMount() {
-    const registerations = await getRegisterations();
-    this.setState({ registerations, loading: false });
-  }
+  // async componentDidMount() {
+  //   const registerations = await getRegisterations();
+  //   this.setState({ registerations, loading: false });
+  // }
 
-  changePage = () => {
-    event.preventDefault();
-    this.setState({page: !this.state.page});
-  }
+  // changePage = () => {
+  //   event.preventDefault();
+  //   const val: boolean = !this.state.page;
+  //   this.setState({
+  //     page: val,
+  //   });
+  // }
 
-  renderApoptoosiPage = () => {
-    if(this.state.page) {
-      return <ApoptoosiRegisterationPage />
-    }
-    else {
-      return <ApoptoosiDefaultPage />
-    }
-  }
 
   render() {
     return (
@@ -142,13 +140,20 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <h1 className="Heading">Apoptoosi XV</h1>
             <h2 className="Heading">2.3.2019</h2>
           </section>
+
           <section className="Countdown">
             <ApoptoosiCountdown />
-            <ApoptoosiLinks urls={this.state.linkUrls} />
+            {/* <ApoptoosiLinks urls={this.state.linkUrls} changePage={this.changePage}/> */}
           </section>
-          {
-            this.renderApoptoosiPage()
-          }
+          <Router>
+            <div>
+            <ApoptoosiLinks /*urls={this.state.linkUrls} changePage={this.changePage}*//>
+
+            <Route path="/" render={() => {<ApoptoosiDefaultPage />}} />
+            <Route path="/registeration" render={() => {<ApoptoosiRegisterationPage />}} />
+            </div>
+          </Router>
+
          <section className="Footer">
               <ApoptoosiFooter urls={this.state.footerImageLinks}/>
          </section>

@@ -5,7 +5,7 @@ interface IApoptoosiContactInformationTableProps {
     // contacts: IApoptoosiContactInformationProps[];
 }
 
-export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInformationTableProps> = ({contacts}) => (
+export const ApoptoosiContactInformationTable: React.SFC<IApoptoosiContactInformationTableProps> = ({}) => (
     
     <div>
 

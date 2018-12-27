@@ -42,7 +42,8 @@ main {
     "ApoptoosiXV"
     "signup"
     "registerations"
-    "ContactInformation";
+    "ContactInformation"
+    "footer";
   font-family: 'chelsea4', sans-serif;
   line-height: 150%;
   color: $FontColor;
@@ -247,6 +248,7 @@ main {
 footer {
   display: flex;
   flex-wrap: wrap;
+  grid-area: footer;
 }
 
 .MainSponsor {
