@@ -9,6 +9,8 @@ import {
   } from '../utils/api';
 import { ApoptoosiLanguageChange } from './ApoptoosiLanguageChange';
 
+import {LanguageContext} from './ApoptoosiMain';
+
 interface IApoptoosiRegisterationPage {
 
     newRegisteration: Registeration,
@@ -42,6 +44,8 @@ export class ApoptoosiRegisterationPage extends React.Component<{language: boole
             loading: true,
             language: this.props.language,
         }
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event: any) {
@@ -52,7 +56,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{language: boole
         var newReg: Registeration = this.state.newRegisteration;
         newReg[target.name] = value;
         
-        console.log(newReg);
+        // console.log(newReg);
 
         this.setState({
           newRegisteration: newReg, 
@@ -71,25 +75,27 @@ export class ApoptoosiRegisterationPage extends React.Component<{language: boole
 
       render() {
           return(
-            <>
-            <div id="registerationPage">
-                <section id="Ilmoittautuminen" className="SignupForm">
-                <ApoptoosiForm
-                formFields={this.state.newRegisteration}
-                onChange={this.handleChange}
-                onSubmit={this.handleSubmit}
-                language={this.state.language}
-                />
-                </section>
-                <section className="RegisteredList">
-                <ApoptoosiList
-                registerations={this.state.registerations}
-                loading={this.state.loading}
-                language={this.state.language}
-                />
-                </section>
-            </div>
-            </>
+            <LanguageContext.Consumer>
+                {({language}) => (
+                <div id="registerationPage">
+                    <section id="Ilmoittautuminen" className="SignupForm">
+                    <ApoptoosiForm
+                    formFields={this.state.newRegisteration}
+                    onChange={this.handleChange}
+                    onSubmit={this.handleSubmit}
+                    language={language}
+                    />
+                    </section>
+                    <section className="RegisteredList">
+                    <ApoptoosiList
+                    registerations={this.state.registerations}
+                    loading={this.state.loading}
+                    language={language}
+                    />
+                    </section>
+                </div>)
+        }
+            </ LanguageContext.Consumer>
           )
       }
 }

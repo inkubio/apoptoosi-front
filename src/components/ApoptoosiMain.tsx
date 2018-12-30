@@ -3,7 +3,7 @@ import { ApoptoosiForm } from './ApoptoosiForm';
 import { ApoptoosiList } from './ApoptoosiList';
 import {ApoptoosiCountdown} from './ApoptoosiCountdown';
 // import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTable';
-import {IApoptoosiContactInformationProps} from './ApoptoosiContantInformation';
+import {IApoptoosiContactInformationProps, ApoptoosiContactInformation} from './ApoptoosiContantInformation';
 // import {ApoptoosiGoogleForms} from './ApoptoosiGoogleForms';
 // import {NavLink} from 'react-router-dom';
 // import {BrowserRouter} from 'react-router-dom';
@@ -22,6 +22,8 @@ import {ApoptoosiRegisterationPage} from './ApoptoosiRegisterationPage';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { ApoptoosiLanguageChange } from './ApoptoosiLanguageChange';
+
+export const LanguageContext = React.createContext({language: true}); 
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -44,6 +46,9 @@ interface IApoptoosiState {
   footerImageLinks: string[];
   // false === the normal page true === registeration page *DEPRECATED*
   language: boolean;
+
+  // registerationComponent: any;
+
 
 }
 
@@ -88,8 +93,12 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         //Finnish is the default language
         language: true,
 
-      };
+        // registerationComponent: <ApoptoosiDefaultPage language={this.state.language} />,
 
+
+
+      };
+      this.changelanguage = this.changelanguage.bind(this);
   }
 
   changelanguage(event: any) {
@@ -97,12 +106,24 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
     this.setState({
       language: !this.state.language
     });
+    // console.log(this.state.language);
+    this.forceUpdate();
   }
 
+  renderDefault(language) {
+    return () => <ApoptoosiRegisterationPage language={language}/>
+  }
 
   render() {
+  
+    const defaultPage = () => <ApoptoosiDefaultPage language={this.state.language} />;
+
     return (
-      <>
+      <LanguageContext.Provider value={
+          {language: this.state.language}
+        }>
+      {/* <div>Current value of language is {this.state.language.toString()}</div> */}
+      {/* <ApoptoosiContactInformation  */}
       <ApoptoosiLanguageChange lang={this.state.language} callback={this.changelanguage}/>
           <section>
             <h1 className="Title">Inkubio 15</h1>
@@ -118,7 +139,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <div>
             <ApoptoosiLinks /*urls={this.state.linkUrls} changePage={this.changePage}*//>
 
-            <Route exact path="/" render={() => <ApoptoosiDefaultPage language={this.state.language} /> }/>
+            <Route exact path="/" component={defaultPage}/>
             <Route exact path="/registeration" render={() => <ApoptoosiRegisterationPage language={this.state.language}/>} />
             </div>
           </Router>
@@ -126,7 +147,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
          <section className="Footer">
               <ApoptoosiFooter urls={this.state.footerImageLinks}/>
          </section>
-      </>
+      </ LanguageContext.Provider >
     );
   }
 }
