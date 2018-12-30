@@ -7,6 +7,7 @@ import {
     getRegisterations,
     postRegisteration,
   } from '../utils/api';
+import { ApoptoosiLanguageChange } from './ApoptoosiLanguageChange';
 
 interface IApoptoosiRegisterationPage {
 
@@ -20,37 +21,11 @@ interface IApoptoosiRegisterationPage {
 
     loading: boolean,
 
+    language: boolean,
+
 }
 
-// export const ApoptoosiRegisterationPage: React.SFC<IApoptoosiRegisterationPage> = (
-//     {
-//         newRegisteration,
-//         handleChange,
-//         handleSubmit,
-//         registerations,
-//         loading,
-//     }
-//     ) => {
-//     return(
-//         <>
-//     <section id="Ilmoittautuminen" className="SignupForm">
-//         <ApoptoosiForm
-//           formFields={this.state.newRegisteration}
-//           onChange={this.handleChange}
-//           onSubmit={this.handleSubmit}
-//           />
-//       </section>
-//       <section className="RegisteredList">
-//       <ApoptoosiList
-//         registerations={this.state.registerations}
-//         loading={this.state.loading}
-//         />
-//       </section>
-//       </>
-//       );
-// }
-
-export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRegisterationPage> {
+export class ApoptoosiRegisterationPage extends React.Component<{language: boolean}, IApoptoosiRegisterationPage> {
     constructor(props) {
         super(props);
 
@@ -65,8 +40,8 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
             },
             registerations: [],
             loading: true,
+            language: this.props.language,
         }
-
     }
 
     handleChange(event: any) {
@@ -76,7 +51,9 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
         // React cannot handle nested objects very well. We shall create a dummy object to update.
         var newReg: Registeration = this.state.newRegisteration;
         newReg[target.name] = value;
-    
+        
+        console.log(newReg);
+
         this.setState({
           newRegisteration: newReg, 
         });
@@ -101,12 +78,14 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
                 formFields={this.state.newRegisteration}
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
+                language={this.state.language}
                 />
                 </section>
                 <section className="RegisteredList">
                 <ApoptoosiList
                 registerations={this.state.registerations}
                 loading={this.state.loading}
+                language={this.state.language}
                 />
                 </section>
             </div>

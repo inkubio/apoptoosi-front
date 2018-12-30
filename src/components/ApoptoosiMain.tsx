@@ -21,6 +21,7 @@ import {ApoptoosiDefaultPage} from './ApoptoosiDefaultPage';
 import {ApoptoosiRegisterationPage} from './ApoptoosiRegisterationPage';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { ApoptoosiLanguageChange } from './ApoptoosiLanguageChange';
 
 interface IApoptoosiState {
   /** Stores the current session's registeration attempt */
@@ -91,16 +92,18 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
 
   }
 
-  changelanguage() {
+  changelanguage(event: any) {
+    event.preventDefault();
     this.setState({
       language: !this.state.language
-    })
+    });
   }
 
 
   render() {
     return (
       <>
+      <ApoptoosiLanguageChange lang={this.state.language} callback={this.changelanguage}/>
           <section>
             <h1 className="Title">Inkubio 15</h1>
             <h1 className="Heading">Apoptoosi XV</h1>
@@ -116,7 +119,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
             <ApoptoosiLinks /*urls={this.state.linkUrls} changePage={this.changePage}*//>
 
             <Route exact path="/" render={() => <ApoptoosiDefaultPage language={this.state.language} /> }/>
-            <Route exact path="/registeration" render={() => <ApoptoosiRegisterationPage />} />
+            <Route exact path="/registeration" render={() => <ApoptoosiRegisterationPage language={this.state.language}/>} />
             </div>
           </Router>
 
