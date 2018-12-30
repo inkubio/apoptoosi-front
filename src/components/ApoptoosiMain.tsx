@@ -39,7 +39,7 @@ interface IApoptoosiState {
 
   startDate: Date;
 
-  googleFormsUrl: string;
+  // googleFormsUrl: string;
 
   linkUrls: string[];
 
@@ -75,7 +75,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         ],
         startDate: new Date("2019-01-20T16:00:00"),
         // googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g/viewform?embedded=true",
-        googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g",
+        // googleFormsUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfCTxI0hts5NhOqGAkffuGx6GYXepdyT5KOVXbXgDrSH68O7g",
         linkUrls: [
           "Juhlavuosi",
           "ApoptoosiXV",
@@ -107,7 +107,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
       language: !this.state.language
     });
     // console.log(this.state.language);
-    this.forceUpdate();
+    // this.forceUpdate();
   }
 
   renderDefault(language) {
