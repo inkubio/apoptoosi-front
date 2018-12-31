@@ -7,7 +7,7 @@ $FontColor3: #8aa9ff44;
 $FontColor: #24478f;
 $ContentBackgroundColor: #fff8;
 $InputBackgroundColor: #fff8;
-$PaddingValue: 15px;
+$PaddingValue: 5vw;
 $ExtraLargeFont: 12vh;
 $LargeFont: 4vh;
 $SmallFont: 3vh;
@@ -74,7 +74,6 @@ main {
     }
 
     .Heading {
-      grid-area: heading;
       font-size: $LargeFont;
       text-align: center;
       line-height: 20%;
@@ -93,13 +92,14 @@ main {
 
     .nav-list {
       display: flex;
+      flex-flow: row wrap;
       justify-content: center;
       font-size: $SmallFont;
-    }
 
-    .nav-list-item {
-      display: block;
-      padding: 2rem;
+      .nav-list-item {
+        display: block;
+        padding: 1rem;
+      }
     }
   }
 
@@ -137,21 +137,17 @@ main {
 
     .ContactInformation {
       margin: 0 auto;
-      // grid-area: ContactInformation;
-      // width: 100%;
       font-size: $SmallFont;
       font-family: 'neutra', sans-serif;
       text-align: center;
     }
 
     .CelebYear {
-      // grid-area: CelebYear;
       background-color: $ContentBackgroundColor;
       padding: $PaddingValue;
     }
 
     .ApoptoosiXV {
-      // grid-area: ApoptoosiXV;
       background-color: $ContentBackgroundColor;
       padding: $PaddingValue;
     }
@@ -163,5 +159,41 @@ main {
 
   .Footer {
     grid-area: footer;
+
+    /* The main sponsor image */
+    .MainSponsor {
+      column-count: 1;
+      column-width: 100vw;
+      text-align: center;
+
+      img {
+        max-width: 50vw;
+        justify-content: center;
+        display: inline-block;
+      }
+
+      h1 {
+        column-span: all;
+      }
+    }
+
+    /* The secondary sponsor images */
+    .SponsorFooter {
+      column-count: 2;
+      column-width: 50vw;
+      text-align: center;
+
+      img {
+        // flex: 25%;
+        max-width: 50vw !important;
+        height: auto !important;
+        justify-content: center;
+        display: inline-block;
+      }
+
+      h1 {
+        column-span: all;
+      }
+    }
   }
 }

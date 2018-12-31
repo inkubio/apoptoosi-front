@@ -81,7 +81,8 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           <ApoptoosiLanguageChange lang={this.state.language} callback={this.changelanguage}/>
         </section>
         <section className="Prologue">
-          <h1 className="Title">Inkubio 15</h1>
+          <h1 className="Title">Inkubio</h1>
+          <h1 className="Title">15</h1>
           <h1 className="Heading">Apoptoosi XV</h1>
           <h2 className="Heading">2.3.2019</h2>
         </section>

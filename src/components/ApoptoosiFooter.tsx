@@ -25,7 +25,6 @@ export const ApoptoosiFooter: React.SFC<IApoptoosiFooter> = ({urls}) => {
                 urls.slice(1).map(
                     elem => {
                         return(
-                                // <img className="footerImage" src={elem}></img>
                                 <img src={elem}></img>
                             )
                     }

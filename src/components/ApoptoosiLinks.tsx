@@ -12,7 +12,7 @@ interface IApoptoosiLinksProps {
 
 }
 
-export const ApoptoosiLinks: React.SFC<IApoptoosiLinksProps> = /*{urls, changePage})*/ () => {
+export const ApoptoosiLinks: React.SFC<IApoptoosiLinksProps> = () => {
     return (
         <LanguageContext.Consumer>
                 {({language}) => (
