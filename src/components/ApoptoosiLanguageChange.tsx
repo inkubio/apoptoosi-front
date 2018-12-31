@@ -12,7 +12,7 @@ interface IApoptoosiLanguageChange {
 export const ApoptoosiLanguageChange: React.SFC<IApoptoosiLanguageChange> = ({callback, lang}) => {
     
     return(
-        <form className="LanguageChange" onSubmit={callback}>
+        <form onSubmit={callback}>
             <input type="submit" value={lang ? "en" : "fi"}/>
         </form>
     );

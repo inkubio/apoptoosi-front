@@ -7,15 +7,15 @@ import {ApoptoosiContactInformationTable} from './ApoptoosiContactInformationTab
 import {LanguageContext} from './ApoptoosiMain';
  
 interface IApoptoosiDefaultPage {
-    language: boolean;
+    // language: boolean;
 }
 
-export const ApoptoosiDefaultPage: React.SFC<IApoptoosiDefaultPage> = (language) => {
+export const ApoptoosiDefaultPage: React.SFC<IApoptoosiDefaultPage> = () => {
 
         return(
             <LanguageContext.Consumer>
             {({language}) => (
-            <div id="ApoptoosiDefaultPage">
+            <div id="DefaultPage">
                 <section id="Juhlavuosi" className="CelebYear">
                     <ApoptoosiCelebYear language={language} />
                 </section>

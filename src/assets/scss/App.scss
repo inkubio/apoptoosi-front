@@ -22,6 +22,7 @@ $SmallFont: 3vh;
   src: url('../fonts/NeutraText-Book.otf');
 }
 
+/* The background image handling */
 html {
   background: url("../img/vector_logo.svg"), url("../img/prettyPaint.jpg");
   background-size: cover, cover;
@@ -30,271 +31,137 @@ html {
   background-attachment: fixed;
 }
 
+/* The root component of the page. It contains the following components:
+    Section: LanguageChange
+    Section: Prologue; Title, Heading, date
+    Section: Countdown
+    Router:
+      Section: (router) Links
+      id: DefaultPage or RegisterationPage
+    Section: Footer
+    All section are defined by their class and pages by id.
+*/
 main {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 80vw;
   justify-content: center;
   grid-template-areas:
+    "languageChange"
     "heading"
     "countdown"
-    "CelebYear"
-    "ApoptoosiXV"
-    "signup"
-    "registerations"
-    "ContactInformation"
+    "links"
+    "pageContent"
     "footer";
   font-family: 'chelsea4', sans-serif;
   line-height: 150%;
   color: $FontColor;
   min-height: 100vh;
-}
 
-#Toimikunta {
-  text-align: center;
-  font-size: $SmallFont;
-}
-
-.ContactInformation {
-  margin: 0 auto;
-  grid-area: ContactInformation;
-  // width: 100%;
-  font-size: $SmallFont;
-  font-family: 'neutra', sans-serif;
-  text-align: center;
-}
-
-.CelebYear {
-  grid-area: CelebYear;
-  background-color: $ContentBackgroundColor;
-  padding: $PaddingValue;
-}
-
-.ApoptoosiXV {
-  grid-area: ApoptoosiXV;
-  background-color: $ContentBackgroundColor;
-  padding: $PaddingValue;
-}
-
-.bulkText {
-  font-family: 'neutra', sans-serif;
-}
-
-// table {
-//   width: 100%;
-// }
-
-.Title {
-  text-align: center;
-  padding-top: 5vh;
-  font-size: $ExtraLargeFont;
-  letter-spacing: $PaddingValue;
-}
-
-.Heading {
-  grid-area: heading;
-  font-size: $LargeFont;
-  text-align: center;
-  line-height: 20%;
-  letter-spacing: 4px;
-}
-
-.SignupForm {
-  grid-area: signup;
-  background-color: $ContentBackgroundColor;
-  padding: $PaddingValue;
-}
-
-.Signup {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
-  font-family: 'neutra', sans-serif;
-}
-
-.Signup input {
-  border-radius: 5px;
-}
-
-.RegisteredList {
-  grid-area: registerations;
-  background-color: $ContentBackgroundColor;
-  padding: $PaddingValue;
-}
-
-.Countdown {
-  grid-area: countdown;
-  text-align: center;
-  font-size: $LargeFont;
-  // height: 50%;
-}
-
-.GoogleForms {
-  grid-area: GoogleForms;
-  text-align: left;
-  grid-template-columns: auto auto;
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
-  width: 20rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  color: $FontColor;
-  font-family: 'neutra', sans-serif;
-  font-size: 1.5rem;
-  // background-color: $InputBackgroundColor;
-
-  input {
-    background-color: $FontColor3;
+  /* The sections */
+  .LanguageChange {
+    grid-area: languageChange;
   }
-  // input::hover {
 
-  // }
-}
+  .Prologue {
+    grid-area: heading;
 
-.form {
-  align-self: center;
-  background-color: $InputBackgroundColor;
-}
+    .Title {
+      text-align: center;
+      padding-top: 5vh;
+      font-size: $ExtraLargeFont;
+      letter-spacing: $PaddingValue;
+    }
 
-//From Vincent Durant at https://www.designrush.com/resources/designskilz/
-.button {
-  background: #1aab8a;
-  color: #fff;
-  border: none;
-  position: relative;
-  height: 60px;
-  font-size: 1.6em;
-  padding: 0 2em;
-  cursor: pointer;
-  transition: 800ms ease all;
-  outline: none;
-}
+    .Heading {
+      grid-area: heading;
+      font-size: $LargeFont;
+      text-align: center;
+      line-height: 20%;
+      letter-spacing: 4px;
+    }
+  }
 
-.button:hover {
-  background: #fff;
-  color: #1aab8a;
-}
-
-.button::before,
-.button::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 2px;
-  width: 0;
-  background: #1aabba;
-  transition: 400ms ease all;
-}
-
-.button::after {
-  right: inherit;
-  top: inherit;
-  left: 0;
-  bottom: 0;
-}
-
-.button:hover::before,
-.button:hover::after {
-  width: 100%;
-  transition: 800ms ease all;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: center;
-  font-size: $SmallFont;
-}
-
-.nav-list-item {
-  display: block;
-  padding: 2rem;
-}
-
-.ToosaLink {
-  color: $FontColor;
-}
-
-.ToosaLink:hover {
-  color: $FontColor1;
-}
-
-.Footer {
-  // background-color: ;
-  // display: grid;
-  // grid-template-areas:
-  //   "first second"
-  //   "third fourth"
-}
-
-.footerImage {
-  // width: 50%;
-  max-width: 50%;
-}
-
-.footerTable {
-  max-width: 100%;
-
-  td {
+  .Countdown {
+    grid-area: countdown;
     text-align: center;
-    max-width: 50%;
-    min-width: 33%;
-  }
-}
-
-footer {
-  display: flex;
-  flex-wrap: wrap;
-  grid-area: footer;
-}
-
-.MainSponsor {
-  // display: flex;
-  // display: block;
-  column-count: 1;
-  column-width: 100vw;
-  // justify-content: center;
-  text-align: center;
-  // align-items: center;
-
-  img {
-    // max-width: 100vw !important;
-    // height: auto !important;
-    max-width: 50vw;
-    justify-content: center;
-    display: inline-block;
+    font-size: $LargeFont;
   }
 
-  h1 {
-    column-span: all;
-  }
-}
+  .Links {
+    grid-area: links;
 
-.SponsorFooter {
-  // flex: 25;
-  // display: flex;
-  // flex-wrap: wrap;
-  // max-width: 25%;
-  column-count: 4;
-  column-width: 50vw;
-  text-align: center;
+    .nav-list {
+      display: flex;
+      justify-content: center;
+      font-size: $SmallFont;
+    }
 
-  img {
-    // flex: 25%;
-    max-width: 50vw !important;
-    height: auto !important;
-    justify-content: center;
-    display: inline-block;
+    .nav-list-item {
+      display: block;
+      padding: 2rem;
+    }
   }
 
-  h1 {
-    column-span: all;
-  }
-}
+  /* The router rendered pages */
+  #RegisterationPage {
+    grid-area: pageContent;
 
-.FooterTitle {
-  text-align: center;
+    .SignupForm {
+      grid-area: signup;
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+    }
+
+    .Signup {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      font-family: 'neutra', sans-serif;
+
+      .input {
+        border-radius: 5px;
+      }
+    }
+
+    .RegisteredList {
+      grid-area: registerations;
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+    }
+  }
+
+  #DefaultPage {
+    grid-area: pageContent;
+
+    .ContactInformation {
+      margin: 0 auto;
+      // grid-area: ContactInformation;
+      // width: 100%;
+      font-size: $SmallFont;
+      font-family: 'neutra', sans-serif;
+      text-align: center;
+    }
+
+    .CelebYear {
+      // grid-area: CelebYear;
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+    }
+
+    .ApoptoosiXV {
+      // grid-area: ApoptoosiXV;
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+    }
+
+    .bulkText {
+      font-family: 'neutra', sans-serif;
+    }
+  }
+
+  .Footer {
+    grid-area: footer;
+  }
 }

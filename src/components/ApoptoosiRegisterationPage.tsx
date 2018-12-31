@@ -23,11 +23,11 @@ interface IApoptoosiRegisterationPage {
 
     loading: boolean,
 
-    language: boolean,
+    // language: boolean,
 
 }
 
-export class ApoptoosiRegisterationPage extends React.Component<{language: boolean}, IApoptoosiRegisterationPage> {
+export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRegisterationPage> {
     constructor(props) {
         super(props);
 
@@ -42,7 +42,6 @@ export class ApoptoosiRegisterationPage extends React.Component<{language: boole
             },
             registerations: [],
             loading: true,
-            language: this.props.language,
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -77,7 +76,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{language: boole
           return(
             <LanguageContext.Consumer>
                 {({language}) => (
-                <div id="registerationPage">
+                <div id="RegisterationPage">
                     <section id="Ilmoittautuminen" className="SignupForm">
                     <ApoptoosiForm
                     formFields={this.state.newRegisteration}
