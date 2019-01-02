@@ -149,6 +149,11 @@ main {
       padding: $PaddingValue;
       color: $FontColor;
       font-family: 'neutra', sans-serif;
+
+      .table {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 

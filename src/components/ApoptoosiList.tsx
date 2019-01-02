@@ -40,7 +40,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
                 <tr>
                   <th>Nimi</th>
                   <th>Ryhmä</th>
-                  <th>Tervehdys</th>
+                  {/* <th>Tervehdys</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -49,7 +49,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
                     <td>{registeration.firstName + ' ' + registeration.lastName}</td>
                     {/* <td>{registeration.lastName}</td> */}
                     <td>{registeration.seatingGroup}</td>
-                    <td>{registeration.text}</td>
+                    {/* <td>{registeration.text}</td> */}
                   </tr>
                 ))}
               </tbody>
@@ -78,7 +78,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
                   <th>Name</th>
                   <th>Group</th>
                   {/* <th>Alcohol</th> */}
-                  <th>Greetins</th>
+                  {/* <th>Greetins</th> */}
                 </tr>
               </thead>
               <tbody>
@@ -87,7 +87,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
                     <td>{registeration.firstName + registeration.lastName}</td>
                     {/* <td>{registeration.lastName}</td> */}
                     <td>{registeration.seatingGroup}</td>¨
-                    <td>{registeration.text}</td>
+                    {/* <td>{registeration.text}</td> */}
                   </tr>
                 ))}
               </tbody>

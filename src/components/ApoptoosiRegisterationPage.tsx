@@ -54,6 +54,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.tick = this.tick.bind(this);
         this.updateRegisterations = this.updateRegisterations.bind(this);
     }
 
@@ -74,7 +75,9 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
       }
 
       tick() {
-          this.setState({currentDate: new Date()})
+          this.setState({
+              currentDate: new Date()
+            });
       }
 
       async handleSubmit(event: any) {
