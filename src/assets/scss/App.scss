@@ -5,6 +5,7 @@ $FontColor1: #36c;
 $FontColor2: #5c85d6;
 $FontColor3: #8aa9ff44;
 $FontColor: #24478f;
+$ButtonColor: #8aa9ff;
 $ContentBackgroundColor: #fff8;
 $InputBackgroundColor: #fff8;
 $PaddingValue: 5vw;
@@ -120,8 +121,14 @@ main {
       grid-row-gap: 1rem;
       font-family: 'neutra', sans-serif;
 
-      .input {
-        border-radius: 5px;
+      .inputButton {
+        background-color: $ButtonColor;
+        color: $DARK;
+        max-width: 70%;
+
+        &:hover {
+          opacity: 0.6;
+        }
       }
     }
 

@@ -38,6 +38,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
                 email: '',
                 seatingGroup: '',
                 alcohol: false,
+                salute: false,
                 text: '',
             },
             registerations: [],

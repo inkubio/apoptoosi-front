@@ -24,7 +24,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
 }) => {
   if(language) {
     return(
-      <>
+      <div>
       <h3>Ilmoittautuneet</h3>
       {loading ? (
         <p>
@@ -46,9 +46,9 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
               <tbody>
                 {registerations.map(registeration => (
                   <tr key={registeration.lastName}>
-                    <td>{registeration.firstName}</td>
-                    <td>{registeration.lastName}</td>
-                    <td>{registeration.seatingGroup}</td>¨
+                    <td>{registeration.firstName + ' ' + registeration.lastName}</td>
+                    {/* <td>{registeration.lastName}</td> */}
+                    <td>{registeration.seatingGroup}</td>
                     <td>{registeration.text}</td>
                   </tr>
                 ))}
@@ -57,11 +57,11 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
           )}
         </>
       )}
-    </>
+    </ div>
     );
   } else {
     return (
-      <>
+      <div>
       <h3>Registered attendees</h3>
       {loading ? (
         <p>
@@ -77,15 +77,15 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
                 <tr>
                   <th>Name</th>
                   <th>Group</th>
-                  <th>Alcohol</th>
+                  {/* <th>Alcohol</th> */}
                   <th>Helloings</th>
                 </tr>
               </thead>
               <tbody>
                 {registerations.map(registeration => (
                   <tr key={registeration.lastName}>
-                    <td>{registeration.firstName}</td>
-                    <td>{registeration.lastName}</td>
+                    <td>{registeration.firstName + registeration.lastName}</td>
+                    {/* <td>{registeration.lastName}</td> */}
                     <td>{registeration.seatingGroup}</td>¨
                     <td>{registeration.text}</td>
                   </tr>
@@ -95,7 +95,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
           )}
         </>
       )}
-    </>
+    </div>
     );
   }
 

@@ -19,6 +19,9 @@ export interface Registeration {
   /** Is the attendee a doku */
   alcohol: boolean;
 
+  /* Salution */
+  salute: boolean;
+
   /** What the attendee wants to tell other attendees */
   text: string;
 }
@@ -53,18 +56,6 @@ export const postRegisteration = async (
         body: JSON.stringify(registerationData),
       },
     );
-    // await fetch(
-    //   `${API_URL}/api/RegistrationData/CreateRegistration`,
-    //   {
-    //     headers: {
-    //       'Connection': 'keep-alive',
-    //       'Content-Type': 'application/json',
-    //     },
-    //     method: 'POST',
-    //     body: JSON.stringify(registerationData),
-    //   },
-    // );
-    // console.log(resp);
 
   } catch (e) {
     // console.log('Failure to fetch with error ' + e); 
