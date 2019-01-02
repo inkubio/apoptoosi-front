@@ -25,9 +25,15 @@ interface IApoptoosiRegisterationPage {
 
     // language: boolean,
 
+    currentDate: Date;
+
+    openingDate: Date;
 }
 
 export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRegisterationPage> {
+    
+    countdown: any;
+
     constructor(props) {
         super(props);
 
@@ -43,6 +49,8 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
             },
             registerations: [],
             loading: true,
+            currentDate: new Date(),
+            openingDate: new Date('2019-01-18T12:00:00'),
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -65,6 +73,10 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
         // console.log(this.state.newRegisteration);
       }
 
+      tick() {
+          this.setState({currentDate: new Date()})
+      }
+
       async handleSubmit(event: any) {
         event.preventDefault();
         await postRegisteration(this.state.newRegisteration);
@@ -78,6 +90,12 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
     
       async componentDidMount() {
         await this.updateRegisterations();
+
+        this.countdown = setInterval(this.tick, 1000);
+      }
+
+      componentWillUnmount() {
+          clearInterval(this.countdown);
       }
 
       render() {
@@ -86,6 +104,10 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
                 {({language}) => (
                 <div id="RegisterationPage">
                     <section id="Ilmoittautuminen" className="SignupForm">
+                    <h1 className="informationText">{this.state.currentDate.getTime() <= this.state.openingDate.getTime() ? 
+                        (language ? 'Ilmoittautuminen alkaa 18.1.2019 kello 12.00' : 'Registeration starts at 18.1.2019 12.00') 
+                        : null}
+                    </h1>
                     <ApoptoosiForm
                     formFields={this.state.newRegisteration}
                     onChange={this.handleChange}

@@ -29,6 +29,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
           <>
           <h3>Ilmoittautuminen</h3>
           <form className="Signup" onSubmit={onSubmit}>
+              {/* <fieldset disabled={currentDate.getTime() >= openingDate.getTime()}> */}
               <label>Etunimi</label>
               <input
                 type="text"
@@ -79,6 +80,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 onChange={onChange}
               />
               <input className="inputButton" type="submit" value="Ilmoittaudu" />
+              {/* </fieldset> */}
           </form>
           </>
         );
