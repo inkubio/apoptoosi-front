@@ -9,7 +9,7 @@ interface IApoptoosiFormProps {
   onChange: (event: any) => void;
 
   /** Send the registeration to the api */
-  onSubmit: () => void;
+  onSubmit: (event: any) => void;
 
   language: boolean;
 }

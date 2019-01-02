@@ -46,6 +46,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateRegisterations = this.updateRegisterations.bind(this);
     }
 
     handleChange(event: any) {
@@ -64,13 +65,19 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
         // console.log(this.state.newRegisteration);
       }
 
-      handleSubmit() {
-        postRegisteration(this.state.newRegisteration);
+      async handleSubmit(event: any) {
+        event.preventDefault();
+        await postRegisteration(this.state.newRegisteration);
+        await this.updateRegisterations();
+      }
+
+      async updateRegisterations() {
+        const registerations = await getRegisterations();
+        this.setState({ registerations, loading: false });
       }
     
       async componentDidMount() {
-        const registerations = await getRegisterations();
-        this.setState({ registerations, loading: false });
+        await this.updateRegisterations();
       }
 
       render() {
