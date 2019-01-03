@@ -24,12 +24,14 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
   onSubmit,
   language,
 }) => {
+    const currentDate = new Date();
+    const openingDate = new Date('2019-01-18T12:00:00');
+    const truthy: boolean = currentDate.getTime() < openingDate.getTime();
     if(language) {
           return(
           <>
           <h3>Ilmoittautuminen</h3>
           <form className="Signup" onSubmit={onSubmit}>
-              {/* <fieldset disabled={currentDate.getTime() >= openingDate.getTime()}> */}
               <label>Etunimi</label>
               <input
                 type="text"
@@ -79,8 +81,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 value={formFields.text}
                 onChange={onChange}
               />
-              <input className="inputButton" type="submit" value="Ilmoittaudu" />
-              {/* </fieldset> */}
+              <input className="inputButton" type="submit" value="Ilmoittaudu" disabled={truthy} />
           </form>
           </>
         );
@@ -138,7 +139,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 value={formFields.text}
                 onChange={onChange}
               />
-              <input className="inputButton" type="submit" value="Submit" />
+              <input className="inputButton" type="submit" value="Submit" disabled={truthy}/>
           </form>
           </>
         );
