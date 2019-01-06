@@ -67,6 +67,7 @@ main {
       border-color: $ButtonColor;
       background-color: $ButtonColor;
       color: $DARK;
+      min-width: 40px;
     }
   }
 
@@ -147,6 +148,11 @@ main {
         &:hover {
           opacity: 0.6;
         }
+
+        &:disabled {
+          pointer-events: none;
+          opacity: 0.2;
+        }
       }
     }
 
@@ -155,7 +161,7 @@ main {
       background-color: $ContentBackgroundColor;
       padding: $PaddingValue;
       color: $FontColor;
-      font-family: 'neutra', sans-serif;
+      font-family: 'chelsea4', sans-serif;
 
       .table {
         width: 100%;
@@ -191,6 +197,7 @@ main {
 
   .Footer {
     grid-area: footer;
+    font-size: $LargeFont;
 
     /* The main sponsor image */
     .MainSponsor {
