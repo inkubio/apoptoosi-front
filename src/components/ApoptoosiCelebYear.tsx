@@ -23,27 +23,27 @@ export const ApoptoosiCelebYear = ({language}) => {
                 {/* <h3>Juhlavuoden tapahtumat</h3> */}
 
                 <h3>Vuosijuhlaviikko</h3>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>Päivämäärä</th>
-                            <th>Tapahtuma</th>
-                            <th>Tila</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Maanantai 25.2.2019</td>
-                            <td>Virpin läpilaulanta</td>
-                            <td>Ossinsauna</td>
-                        </tr>
-                        <tr>
-                            <td>Keskiviikko 27.2.2019</td>
-                            <td>Tanssi- ja tapakoulutus</td>
-                            <td>OUBS studio</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Päivämäärä</th>
+                                <th>Tapahtuma</th>
+                                <th>Tila</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Maanantai 25.2.2019</td>
+                                <td>Virpin läpilaulanta</td>
+                                <td>Ossinsauna</td>
+                            </tr>
+                            <tr>
+                                <td>Keskiviikko 27.2.2019</td>
+                                <td>Tanssi- ja tapakoulutus</td>
+                                <td>OUBS studio</td>
+                            </tr>
+                        </tbody>
+                    </table>
             </div>
         )
     } else {

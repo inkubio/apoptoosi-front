@@ -72,6 +72,7 @@ main {
       background-color: $ButtonColor;
       color: $DARK;
       min-width: 40px;
+      font-weight: bold;
     }
   }
 
@@ -109,14 +110,12 @@ main {
       justify-content: center;
       font-size: $SmallFont;
       font-weight: bold;
-      color: $FontColor;
 
       .nav-list-item {
         display: block;
-        color: initial;
         padding: 1rem;
 
-        &:focus {
+        a {
           color: $FontColor;
         }
       }
