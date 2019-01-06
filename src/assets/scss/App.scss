@@ -102,10 +102,17 @@ main {
       flex-flow: row wrap;
       justify-content: center;
       font-size: $SmallFont;
+      font-weight: bold;
+      color: $FontColor;
 
       .nav-list-item {
         display: block;
+        color: initial;
         padding: 1rem;
+
+        &:focus {
+          color: $FontColor;
+        }
       }
     }
   }
@@ -192,13 +199,15 @@ main {
       text-align: center;
 
       img {
-        max-width: 50vw;
+        max-width: 40vw;
         justify-content: center;
         display: inline-block;
       }
 
       h1 {
         column-span: all;
+        font-size: $LargeFont;
+        padding: 1vw;
       }
     }
 
@@ -209,12 +218,18 @@ main {
       // text-align: center;
       display: grid;
       grid-template-columns: 50% 50%;
-      align-items: center;
+      // align-items: center;
+      // justify-content: center;
+      // align-content: center;
       grid-gap: 1vw;
 
       img {
-        width: 100%;
-        justify-content: center;
+        width: 50%;
+        // justify-content: center;
+        justify-self: center;
+        // align-items: center;
+        // align-items: center;
+        // align-self: center;
         display: inline-block;
         max-width: 20rem;
       }
@@ -222,6 +237,11 @@ main {
       h1 {
         column-span: all;
         grid-column: 1 / 3;
+        font-size: $LargeFont;
+        // align-items: center;
+        // justify-content: center;
+        justify-self: center;
+        // align-content: center;
       }
     }
   }
