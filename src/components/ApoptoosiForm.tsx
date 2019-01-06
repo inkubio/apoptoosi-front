@@ -74,6 +74,13 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 checked={formFields.salute}
                 onChange={onChange}
                 />
+              <label>Olen kutsuvieras</label>
+              <input
+                type="checkbox"
+                name="invited"
+                checked={formFields.invited}
+                onChange={onChange}
+              />
               <label>Tervehdykset</label>
               <input
                 type="text"
@@ -132,6 +139,14 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 checked={formFields.salute}
                 onChange={onChange}
                 />
+
+              <label>I am invited guest</label>
+              <input
+                type="checkbox"
+                name="invited"
+                checked={formFields.invited}
+                onChange={onChange}
+              />
               <label>Greetings to the guild</label>
               <input
                 type="text"

@@ -7,23 +7,16 @@ import {
     getRegisterations,
     postRegisteration,
   } from '../utils/api';
-import { ApoptoosiLanguageChange } from './ApoptoosiLanguageChange';
-
+  
 import {LanguageContext} from './ApoptoosiMain';
 
 interface IApoptoosiRegisterationPage {
 
     newRegisteration: Registeration,
 
-    // handleChange: (event: any) => void,
-
-    // handleSubmit: () => void,
-
     registerations: Registeration[],
 
     loading: boolean,
-
-    // language: boolean,
 
     currentDate: Date;
 
@@ -45,6 +38,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
                 seatingGroup: '',
                 alcohol: false,
                 salute: false,
+                invited: false,
                 text: '',
             },
             registerations: [],

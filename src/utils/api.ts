@@ -13,6 +13,7 @@ export interface Registeration {
 
   /**Email of the attendee **/ 
   email: string;
+
   /** People with whom the attendee wants to sit with */
   seatingGroup: string;
 
@@ -21,6 +22,9 @@ export interface Registeration {
 
   /* Salution */
   salute: boolean;
+
+  /* Is the guest invited */
+  invited: boolean;
 
   /** What the attendee wants to tell other attendees */
   text: string;

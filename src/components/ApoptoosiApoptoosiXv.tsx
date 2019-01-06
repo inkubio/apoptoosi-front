@@ -19,8 +19,50 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
     
                 Vuosijuhla on iltapukujuhla, jossa miehillä on asuna tumma puku ja naisilla pitkä 
                 iltapuku. Lisäksi juhlapukuja koristaa akateemiset kunniamerkit. 
-    
             </p>
+            <h1>Aikataulu</h1>
+            <table className="table">
+            <thead>
+                <tr>
+                    <th>Päivämäärä</th>
+                    <th>Aika</th>
+                    <th>Tapahtuma</th>
+                    <th>Paikka</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lauantai 2.3.2019</td>
+                    <td>15:00</td>
+                    <td>Cocktailtilaisuus</td>
+                    <td>Trap Factory,
+                        Metallimiehenkuja 6,
+                        02150 Espoo
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>18:00</td>
+                    <td>Pääjuhla</td>
+                    <td>Kulosaaren Casino,
+                        Hopeasalmenpolku 1,
+                        00570 Helsinki
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>24:00</td>
+                    <td>Jatkot</td>
+                    <td></td>
+                </tr>
+                <tr>
+                  <td>Sunnuntai 3.3.2019</td>
+                  <td>12:00</td>
+                  <td>Sillisaamiainen</td>
+                  <td></td>
+                </tr>
+            </tbody>
+            </table>
         </>
         );
     }
@@ -39,6 +81,50 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
             After this the means of transport will take the guests to the after party 
             at place X.
             </p>
+
+            <h1>Timetable</h1>
+            <table className="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Venue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Saturday 2.3.2019</td>
+                    <td>15:00</td>
+                    <td>Cocktailparty</td>
+                    <td>Trap Factory,
+                        Metallimiehenkuja 6,
+                        02150 Espoo
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>18:00</td>
+                    <td>Main party</td>
+                    <td>Kulosaaren Casino,
+                        Hopeasalmenpolku 1,
+                        00570 Helsinki
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>24:00</td>
+                    <td>Afterparty</td>
+                    <td></td>
+                </tr>
+                <tr>
+                  <td>Sunday 3.3.2019</td>
+                  <td>12:00</td>
+                  <td>Sillis</td>
+                  <td></td>
+                </tr>
+            </tbody>
+            </table>
         </>
     );
     }

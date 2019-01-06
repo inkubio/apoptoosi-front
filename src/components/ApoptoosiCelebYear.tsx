@@ -20,9 +20,30 @@ export const ApoptoosiCelebYear = ({language}) => {
                 virtapiirikuvioilla koristeltu college-paita. Ehkä olet jo bongannut 
                 paidan Apoptoosi-toimihenkilöiden päällä? 
                 </p>
-                <h3>Juhlavuoden tapahtumat</h3>
+                {/* <h3>Juhlavuoden tapahtumat</h3> */}
 
                 <h3>Vuosijuhlaviikko</h3>
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Päivämäärä</th>
+                            <th>Tapahtuma</th>
+                            <th>Tila</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maanantai 25.2.2019</td>
+                            <td>Virpin läpilaulanta</td>
+                            <td>Ossinsauna</td>
+                        </tr>
+                        <tr>
+                            <td>Keskiviikko 27.2.2019</td>
+                            <td>Tanssi- ja tapakoulutus</td>
+                            <td>OUBS studio</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         )
     } else {
@@ -35,9 +56,30 @@ export const ApoptoosiCelebYear = ({language}) => {
             Now everyone can buy an own college shirt in green colour, embellished with 
             Inkubio’s electric circuit pattern. Perhaps you have already seen the apoptoosi officials wearing these shirts?
             </p>
-            <h3>Events</h3>
+            {/* <h3>Events</h3> */}
 
             <h3>Annual ball week</h3>
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                        <th>Premise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday 25.2.2019</td>
+                        <td>Carol of Virpi</td>
+                        <td>Ossinsauna</td>
+                    </tr>
+                    <tr>
+                        <td>Webnesday 27.2.2019</td>
+                        <td>Dance and manner traimning</td>
+                        <td>OUBS studio</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         );
     }

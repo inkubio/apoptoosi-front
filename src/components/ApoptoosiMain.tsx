@@ -22,6 +22,7 @@ import {ApoptoosiRegisterationPage} from './ApoptoosiRegisterationPage';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { ApoptoosiLanguageChange } from './ApoptoosiLanguageChange';
+import { timingSafeEqual } from 'crypto';
 
 /* Create global language boolean value */
 export const LanguageContext = React.createContext({language: true}); 
@@ -104,7 +105,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         </Router>
 
         <section className="Footer">
-          <ApoptoosiFooter urls={this.state.footerImageLinks}/>
+          <ApoptoosiFooter urls={this.state.footerImageLinks} language={this.state.language} />
         </section>
       </ LanguageContext.Provider >
     );
