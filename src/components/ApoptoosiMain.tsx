@@ -55,6 +55,8 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           "../src/assets/img/AW_logo_main_version_RGB.svg",
           "../src/assets/img/Copy_of_futurice-logo-green.svg",
           "../src/assets/img/Planmeca_logo.png",
+          "../src/assets/img/BpG_Logotype_blue.png",
+          "../src/assets/img/spinverse_fullcolor_NEW-01 (1).png",
         ],
         //Finnish is the default language
         language: true,
