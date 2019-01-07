@@ -8,17 +8,19 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
         <>
             <h1>Apoptoosi XV</h1>
             <p className="bulkText">
-                Vuosijuhla on killan tapahtumista hienoin ja juhlallisin. 
-                Inkubion 15. vuosijuhlia vietetään lauantaina 2.3.
-    
-                Juhlat alkavat cocktailtilaisuudella A Grid:ssa, 
-                osoitteessa Otakaari 5. Tarjoilujen ja lahjojenannon 
-                jälkeen siirrytään cocktailtilaisuudesta kuljetuksella pääjuhlapaikalle.
-                Pääjuhlaa vietetään Kulosaaren Casinolla osoitteessa Hopeasalmenpolku 1.
-                Pääjuhlan jälkeen ilta jatkuu kuljetuksen vieden juhlavieraat jatkopaikkaan X.
-    
-                Vuosijuhla on iltapukujuhla, jossa miehillä on asuna tumma puku ja naisilla pitkä 
-                iltapuku. Lisäksi juhlapukuja koristaa akateemiset kunniamerkit. 
+            Vuosijuhla on killan tapahtumista hienoin ja juhlallisin. 
+            Inkubion 15. vuosijuhlia vietetään lauantaina 2.3.2019 ja 
+            juhlintaa jatketaan silliaamiaisella sunnuntaina 3.3.2019.
+            Juhlat alkavat cocktailtilaisuudella <b>Trap Factorylla </b>osoitteessa 
+            Metallimiehenkuja 6, Espoo. Tarjoilujen ja lahjojenannon jälkeen siirrytään 
+            cocktailtilaisuudesta kuljetuksella pääjuhlapaikalle. Pääjuhlaa 
+            vietetään <b>Kulosaaren Casinolla</b> osoitteessa Hopeasalmenpolku 1, Helsinki. Pääjuhlan 
+            jälkeen ilta jatkuu kuljetuksen vieden juhlavieraat jatkopaikkaan X. 
+            Seuraavana päivänä henkistä ja fyysistä hyvinvointia hellitään silliksellä 
+            paikassa Y, jonne vieraat pääsevät bussikuljetuksella Otaniemestä.
+            Vuosijuhla on iltapukujuhla, jossa miehillä on asuna tumma puku ja naisilla 
+            pitkä iltapuku. Lisäksi juhlapukuja koristaa akateemiset kunniamerkit.
+
             </p>
             <h1>Aikataulu</h1>
             <table className="table">
@@ -35,7 +37,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                     <td>Lauantai 2.3.2019</td>
                     <td>15:00</td>
                     <td>Cocktailtilaisuus</td>
-                    <td>Trap Factory,
+                    <td>Trap Factory,<br/>
                         Metallimiehenkuja 6,
                         02150 Espoo
                     </td>
@@ -44,7 +46,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                     <td></td>
                     <td>18:00</td>
                     <td>Pääjuhla</td>
-                    <td>Kulosaaren Casino,
+                    <td>Kulosaaren Casino,<br/>
                         Hopeasalmenpolku 1,
                         00570 Helsinki
                     </td>
@@ -53,13 +55,13 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                     <td></td>
                     <td>24:00</td>
                     <td>Jatkot</td>
-                    <td></td>
+                    <td>Paikka X</td>
                 </tr>
                 <tr>
                   <td>Sunnuntai 3.3.2019</td>
                   <td>12:00</td>
-                  <td>Sillisaamiainen</td>
-                  <td></td>
+                  <td>Silliaamiainen</td>
+                  <td>Paikka Y</td>
                 </tr>
             </tbody>
             </table>
@@ -71,15 +73,20 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
         <>
             <h1>Apoptoosi XV</h1>
             <p className="bulkText">
-            The annual ball is the most finest and formal event held by the Inkubio guild. 
-            It is a white tie event, which means that the men wear a dark suit and the 
-            women an evening dress. In addition the academic honours are included in 
-            the dress code. The annual ball starts with a cocktail event at A Grid 
-            (Otakaari 5) and is followed by main event and eventually an after party. 
-            There is an organised transport from the cocktail party to the main event. 
-            The main event is held at Kulosaari Casino (Hopeasalmenpolku 1). 
-            After this the means of transport will take the guests to the after party 
-            at place X.
+            The annual ball is the finest and most formal event held by 
+            the Inkubio guild. It is a white tie event, which means that the 
+            men wear a dark suit and the women an evening dress. In addition 
+            the academic honours are included in the dress code. The annual 
+            ball starts with a cocktail event at <b>Trap Factory </b>
+            (Metallimiehenkuja 6, Espoo) and is followed by main event and
+             eventually an after party. There is an organised transport from 
+             the cocktail party to the main event. The main event is held at 
+             <b>Kulosaari Casino</b> (Hopeasalmenpolku 1, Helsinki). After this the 
+             means of transport will take the guests to the after party at 
+             place X. Next morning, the physical and mental wellbeing of the 
+             guests is treated in the sillis breakfast at place Y where the 
+             guests will be transported by bus from Otaniemi.
+
             </p>
 
             <h1>Timetable</h1>
@@ -97,7 +104,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                     <td>Saturday 2.3.2019</td>
                     <td>15:00</td>
                     <td>Cocktailparty</td>
-                    <td>Trap Factory,
+                    <td>Trap Factory,<br/>
                         Metallimiehenkuja 6,
                         02150 Espoo
                     </td>
@@ -106,7 +113,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                     <td></td>
                     <td>18:00</td>
                     <td>Main party</td>
-                    <td>Kulosaaren Casino,
+                    <td>Kulosaaren Casino,<br/>
                         Hopeasalmenpolku 1,
                         00570 Helsinki
                     </td>
@@ -115,13 +122,13 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                     <td></td>
                     <td>24:00</td>
                     <td>Afterparty</td>
-                    <td></td>
+                    <td>Place X</td>
                 </tr>
                 <tr>
                   <td>Sunday 3.3.2019</td>
                   <td>12:00</td>
                   <td>Sillis</td>
-                  <td></td>
+                  <td>Place Y</td>
                 </tr>
             </tbody>
             </table>

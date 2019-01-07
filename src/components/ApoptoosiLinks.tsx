@@ -17,10 +17,10 @@ export const ApoptoosiLinks: React.SFC<IApoptoosiLinksProps> = () => {
         <LanguageContext.Consumer>
                 {({language}) => (
         <ul className="nav-list">
-            <li className="nav-list-item"><Link to="/#Juhlavuosi">{ language ? 'Juhlavuosi' : 'Celebratory year' }</Link></li>
-            <li className="nav-list-item"><Link to="/#ApoptoosiXV">ApoptoosiXV</Link></li>
-            <li className="nav-list-item"><Link to="/registeration">{ language ? 'Ilmoittautuminen' : 'Registeration' }</Link></li>
-            <li className="nav-list-item"><Link to="/#Yhteystiedot">{ language ? 'Yhteystiedot' : 'Contact' }</Link></li>
+            <li className="nav-list-item"><Link to="/inkubio15/#Juhlavuosi">{ language ? 'Juhlavuosi' : 'Celebratory year' }</Link></li>
+            <li className="nav-list-item"><Link to="/inkubio15/#ApoptoosiXV">ApoptoosiXV</Link></li>
+            <li className="nav-list-item"><Link to="/inkubio15/registration">{ language ? 'Ilmoittautuminen' : 'Registration' }</Link></li>
+            <li className="nav-list-item"><Link to="/inkubio15/#Yhteystiedot">{ language ? 'Yhteystiedot' : 'Contact' }</Link></li>
         </ul>)}
         </ LanguageContext.Consumer>
 

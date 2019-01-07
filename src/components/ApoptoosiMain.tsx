@@ -24,6 +24,14 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { ApoptoosiLanguageChange } from './ApoptoosiLanguageChange';
 import { timingSafeEqual } from 'crypto';
 
+const RemoteA_logo = require('../assets/img/RemoteA_logo.svg');
+const Philips_logo = require( '../assets/img/Philips_logo_new.svg');
+const AW_logo = require('../assets/img/AW_logo_main_version_RGB.svg');
+const Futu_logo = require('../assets/img/Copy_of_futurice-logo-green.svg');
+const Planmeca_logo = require('../assets/img/Planmeca_logo.png');
+const BpG_logo = require('../assets/img/BpG_Logotype_blue.png');
+const Spinverse_logo = require('../assets/img/spinverse_fullcolor_NEW-01 (1).png');
+
 /* Create global language boolean value */
 export const LanguageContext = React.createContext({language: true}); 
 
@@ -34,7 +42,6 @@ interface IApoptoosiState {
   footerImageLinks: string[];
   // false === the normal page true === registeration page *DEPRECATED*
   language: boolean;
-
 
 }
 
@@ -51,13 +58,13 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
         startDate: new Date("2019-01-20T16:00:00"),
 
         footerImageLinks: [
-          "../src/assets/img/RemoteA_logo.svg",
-          "../src/assets/img/Philips_logo_new.svg",
-          "../src/assets/img/AW_logo_main_version_RGB.svg",
-          "../src/assets/img/Copy_of_futurice-logo-green.svg",
-          "../src/assets/img/Planmeca_logo.png",
-          "../src/assets/img/BpG_Logotype_blue.png",
-          "../src/assets/img/spinverse_fullcolor_NEW-01 (1).png",
+          RemoteA_logo,
+          Philips_logo,
+          AW_logo,
+          Futu_logo,
+          Planmeca_logo,
+          BpG_logo,
+          Spinverse_logo,
         ],
         //Finnish is the default language
         language: true,
@@ -99,8 +106,8 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
               <ApoptoosiLinks />
             </section>
 
-            <Route exact path="/" render={() => <ApoptoosiDefaultPage />}/>
-            <Route exact path="/registeration" render={() => <ApoptoosiRegisterationPage />} />
+            <Route exact path="/inkubio15/" render={() => <ApoptoosiDefaultPage />}/>
+            <Route exact path="/inkubio15/registration" render={() => <ApoptoosiRegisterationPage />} />
           </div>
         </Router>
 
