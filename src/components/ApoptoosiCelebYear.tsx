@@ -87,7 +87,7 @@ export const ApoptoosiCelebYear = ({language}) => {
                     </tr>
                     <tr>
                         <td>Webnesday 27.2.2019</td>
-                        <td>Dance and manner traimning</td>
+                        <td>Dance and manner training</td>
                         <td>OUBS studio</td>
                     </tr>
                 </tbody>

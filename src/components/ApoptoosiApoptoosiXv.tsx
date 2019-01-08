@@ -18,9 +18,9 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
             jälkeen ilta jatkuu kuljetuksen vieden juhlavieraat jatkopaikkaan X. 
             Seuraavana päivänä henkistä ja fyysistä hyvinvointia hellitään silliksellä 
             paikassa Y, jonne vieraat pääsevät bussikuljetuksella Otaniemestä.
-            Vuosijuhla on iltapukujuhla, jossa miehillä on asuna tumma puku ja naisilla 
-            pitkä iltapuku. Lisäksi juhlapukuja koristaa akateemiset kunniamerkit.
-
+            Vuosijuhla on iltapukujuhla, jossa asuna on frakki tai tumma puku 
+            tai pitkä iltapuku. Lisäksi juhlapukuja koristavat akateemiset 
+            kunniamerkit.
             </p>
             <h1>Aikataulu</h1>
             <table className="table">
