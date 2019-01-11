@@ -14,7 +14,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
             Juhlat alkavat cocktailtilaisuudella <b>Trap Factorylla </b>osoitteessa 
             Metallimiehenkuja 6, Espoo. Tarjoilujen ja lahjojenannon jälkeen siirrytään 
             cocktailtilaisuudesta kuljetuksella pääjuhlapaikalle. Pääjuhlaa 
-            vietetään <b>Kulosaaren Casinolla</b> osoitteessa Hopeasalmenpolku 1, Helsinki. Pääjuhlan 
+            vietetään <b>Kulosaaren Kasinolla</b> osoitteessa Hopeasalmenpolku 1, Helsinki. Pääjuhlan 
             jälkeen ilta jatkuu kuljetuksen vieden juhlavieraat jatkopaikkaan X. 
             Seuraavana päivänä henkistä ja fyysistä hyvinvointia hellitään silliksellä 
             paikassa Y, jonne vieraat pääsevät bussikuljetuksella Otaniemestä.
