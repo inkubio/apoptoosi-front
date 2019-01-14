@@ -1,5 +1,5 @@
 // const API_URL = 'http://localhost:5000';
-const API_URL = 'inkubaattori.aalto.fi:5000';
+const API_URL = 'https://inkubaattori.aalto.fi/apoptoosi';
 
 /** General registeration object, used to send new
  * registerations to API, and previous registerations

@@ -1,8 +1,8 @@
-POST http://inkubaattori.aalto.fi:5000/api/RegistrationData/CreateRegistration
+POST https://inkubaattori.aalto.fi/apoptoosi/api/RegistrationData/CreateRegistration
 Content-Type: application/json
 
 {
-    "firstName": "TestiToka",
+    "firstName": "TestiToka3",
     "lastName": "Testikolmas",
     "email": "vituttaa@inkubio.fi",
     "seatingGroup": "Gambiina",
