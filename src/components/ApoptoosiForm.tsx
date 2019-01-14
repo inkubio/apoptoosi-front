@@ -67,6 +67,13 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 checked={formFields.alcohol}
                 onChange={onChange}
               />
+              <label>Seuralainen</label>
+              <input
+                type="text"
+                name="avec"
+                value={formFields.avec}
+                onChange={onChange}
+              />
               <label>Jätän tervehdyksen</label>
               <input 
                 type="checkbox"
@@ -130,6 +137,13 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 type="checkbox"
                 name="alcohol"
                 checked={formFields.alcohol}
+                onChange={onChange}
+              />
+              <label>Escort</label>
+              <input
+                type="text"
+                name="avec"
+                value={formFields.avec}
                 onChange={onChange}
               />
               <label>I shall be leaving a salute</label>

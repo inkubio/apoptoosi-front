@@ -20,6 +20,10 @@ export interface Registeration {
   /** Is the attendee a doku */
   alcohol: boolean;
 
+
+  /* The avec of the attendee */ 
+  avec: string;
+
   /* Salution */
   salute: boolean;
 
