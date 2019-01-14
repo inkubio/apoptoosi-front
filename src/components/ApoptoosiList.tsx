@@ -35,25 +35,27 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
           {registerations.length === 0 ? (
             <p>Ei ilmoittautumisia.</p>
           ) : (
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Nimi</th>
-                  <th>Ryhmä</th>
-                  {/* <th>Tervehdys</th> */}
-                </tr>
-              </thead>
-              <tbody>
-                {registerations.map(registeration => (
-                  <tr key={registeration.lastName}>
-                    <td>{registeration.firstName + ' ' + registeration.lastName}</td>
-                    {/* <td>{registeration.lastName}</td> */}
-                    <td>{registeration.seatingGroup}</td>
-                    {/* <td>{registeration.text}</td> */}
+            <div className="overflowDiv">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Nimi</th>
+                    <th>Ryhmä</th>
+                    {/* <th>Tervehdys</th> */}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {registerations.map(registeration => (
+                    <tr key={registeration.lastName}>
+                      <td>{registeration.firstName + ' ' + registeration.lastName}</td>
+                      {/* <td>{registeration.lastName}</td> */}
+                      <td>{registeration.seatingGroup}</td>
+                      {/* <td>{registeration.text}</td> */}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </>
       )}
@@ -72,26 +74,28 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
           {registerations.length === 0 ? (
             <p>No registerations.</p>
           ) : (
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Group</th>
-                  {/* <th>Alcohol</th> */}
-                  {/* <th>Greetins</th> */}
-                </tr>
-              </thead>
-              <tbody>
-                {registerations.map(registeration => (
-                  <tr key={registeration.lastName}>
-                    <td>{registeration.firstName + registeration.lastName}</td>
-                    {/* <td>{registeration.lastName}</td> */}
-                    <td>{registeration.seatingGroup}</td>¨
-                    {/* <td>{registeration.text}</td> */}
+            <div className="overflowDiv">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Group</th>
+                    {/* <th>Alcohol</th> */}
+                    {/* <th>Greetins</th> */}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {registerations.map(registeration => (
+                    <tr key={registeration.lastName}>
+                      <td>{registeration.firstName + registeration.lastName}</td>
+                      {/* <td>{registeration.lastName}</td> */}
+                      <td>{registeration.seatingGroup}</td>¨
+                      {/* <td>{registeration.text}</td> */}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           )}
         </>
       )}

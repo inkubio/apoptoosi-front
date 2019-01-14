@@ -23,48 +23,50 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
             kunniamerkit.
             </p>
             <h1>Aikataulu</h1>
-            <table className="table">
-            <thead>
-                <tr>
-                    <th>Päivämäärä</th>
-                    <th>Aika</th>
-                    <th>Tapahtuma</th>
-                    <th>Paikka</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Lauantai 2.3.2019</td>
-                    <td>15:00</td>
-                    <td>Cocktailtilaisuus</td>
-                    <td>Trap Factory,<br/>
-                        Metallimiehenkuja 6,
-                        02150 Espoo
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>18:00</td>
-                    <td>Pääjuhla</td>
-                    <td>Kulosaaren Casino,<br/>
-                        Hopeasalmenpolku 1,
-                        00570 Helsinki
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>24:00</td>
-                    <td>Jatkot</td>
-                    <td>Paikka X</td>
-                </tr>
-                <tr>
-                  <td>Sunnuntai 3.3.2019</td>
-                  <td>12:00</td>
-                  <td>Silliaamiainen</td>
-                  <td>Paikka Y</td>
-                </tr>
-            </tbody>
-            </table>
+            <div className="overflowDiv">
+                <table className="table">
+                <thead>
+                    <tr>
+                        <th>Päivämäärä</th>
+                        <th>Aika</th>
+                        <th>Tapahtuma</th>
+                        <th>Paikka</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lauantai 2.3.2019</td>
+                        <td>15:00</td>
+                        <td>Cocktailtilaisuus</td>
+                        <td>Trap Factory,<br/>
+                            Metallimiehenkuja 6,
+                            02150 Espoo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>18:00</td>
+                        <td>Pääjuhla</td>
+                        <td>Kulosaaren Casino,<br/>
+                            Hopeasalmenpolku 1,
+                            00570 Helsinki
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>24:00</td>
+                        <td>Jatkot</td>
+                        <td>Paikka X</td>
+                    </tr>
+                    <tr>
+                    <td>Sunnuntai 3.3.2019</td>
+                    <td>12:00</td>
+                    <td>Silliaamiainen</td>
+                    <td>Paikka Y</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
         </>
         );
     }
@@ -90,6 +92,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
             </p>
 
             <h1>Timetable</h1>
+            <div className="overflowDiv">
             <table className="table">
             <thead>
                 <tr>
@@ -132,6 +135,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                 </tr>
             </tbody>
             </table>
+            </div>
         </>
     );
     }

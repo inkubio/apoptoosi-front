@@ -29,28 +29,30 @@ export const ApoptoosiCelebYear = ({language}) => {
                     itse vuosijuhlapäivään, vaan Inkubio 15 -juhlahumua on 
                     havaittavissa jo useissa tapahtumissa pitkin talvea.
                 </p>
-                <h3>Vuosijuhlaviikko</h3>
-                    <table className="table">
-                        <thead>
-                            <tr>
-                                <th>Päivämäärä</th>
-                                <th>Tapahtuma</th>
-                                <th>Tila</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Maanantai 25.2.2019</td>
-                                <td>Virpin läpilaulanta</td>
-                                <td>Ossinsauna</td>
-                            </tr>
-                            <tr>
-                                <td>Keskiviikko 27.2.2019</td>
-                                <td>Tanssi- ja tapakoulutus</td>
-                                <td>OUBS studio</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className="overflowDiv">
+                    <h3>Vuosijuhlaviikko</h3>
+                        <table className="table">
+                            <thead>
+                                <tr>
+                                    <th>Päivämäärä</th>
+                                    <th>Tapahtuma</th>
+                                    <th>Tila</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Maanantai 25.2.2019</td>
+                                    <td>Virpin läpilaulanta</td>
+                                    <td>Ossinsauna</td>
+                                </tr>
+                                <tr>
+                                    <td>Keskiviikko 27.2.2019</td>
+                                    <td>Tanssi- ja tapakoulutus</td>
+                                    <td>OUBS studio</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
             </div>
         )
     } else {
@@ -71,6 +73,7 @@ export const ApoptoosiCelebYear = ({language}) => {
             on March 2nd, 2019. Though, the celebrations continue throughout the year in different events.
             </p>
             <h3>Annual ball week</h3>
+            <div className="overflowDiv">
             <table className="table">
                 <thead>
                     <tr>
@@ -92,6 +95,7 @@ export const ApoptoosiCelebYear = ({language}) => {
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
         );
     }
