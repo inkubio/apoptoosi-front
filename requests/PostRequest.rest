@@ -1,4 +1,4 @@
-POST http://localhost:5000/api/RegistrationData/CreateRegistration
+POST http://inkubaattori.aalto.fi:5000/api/RegistrationData/CreateRegistration
 Content-Type: application/json
 
 {
@@ -7,5 +7,8 @@ Content-Type: application/json
     "email": "vituttaa@inkubio.fi",
     "seatingGroup": "Gambiina",
     "alcohol": true,
+    "avec": "No lol ei",
+    "salute": 1,
+    "invited": 1,
     "text": "Helloing of the world"
 }

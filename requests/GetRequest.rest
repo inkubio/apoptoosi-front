@@ -1,1 +1,1 @@
-GET http://localhost:5000/api/RegistrationData/Registrations
+GET http://inkubaattori.aalto.fi:5000/api/registrationdata/registrations
