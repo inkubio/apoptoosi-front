@@ -21,6 +21,8 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
             Vuosijuhla on iltapukujuhla, jossa asuna on frakki tai tumma puku 
             tai pitkä iltapuku. Lisäksi juhlapukuja koristavat akateemiset 
             kunniamerkit.
+            <br/><br/>
+            Illalliskortti maksaa opiskelijalle 75 euroa ja valmistuneelle 100 euroa. Sillisaamiainen kustantaa 20 euroa.
             </p>
             <h1>Aikataulu</h1>
             <div className="overflowDiv">

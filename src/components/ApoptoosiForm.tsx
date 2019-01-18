@@ -67,6 +67,20 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 checked={formFields.alcohol}
                 onChange={onChange}
               />
+              <label>Sillis</label>
+              <input
+                  type="checkbox"
+                  name="sillis"
+                  checked={formFields.sillis}
+                  onChange={onChange}
+              />
+              <label>Allergiat</label>
+              <input
+                type="text"
+                name="allergy"
+                value={formFields.allergy}
+                onChange={onChange}
+              />
               <label>Avec</label>
               <input
                 type="text"
@@ -137,6 +151,20 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 type="checkbox"
                 name="alcohol"
                 checked={formFields.alcohol}
+                onChange={onChange}
+              />
+              <label>Sillis</label>
+              <input
+                  type="checkbox"
+                  name="sillis"
+                  checked={formFields.sillis}
+                  onChange={onChange}
+              />
+              <label>Allergies</label>
+              <input
+                type="text"
+                name="allergy"
+                value={formFields.allergy}
                 onChange={onChange}
               />
               <label>Avec</label>
