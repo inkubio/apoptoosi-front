@@ -74,7 +74,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                   checked={formFields.sillis}
                   onChange={onChange}
               />
-              <label>Allergiat</label>
+              <label>Erikoisruokavalio</label>
               <input
                 type="text"
                 name="allergy"
@@ -100,6 +100,13 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 type="checkbox"
                 name="invited"
                 checked={formFields.invited}
+                onChange={onChange}
+              />
+              <label>Olen alumni</label>
+              <input
+                type="checkbox"
+                name="alumni"
+                checked={formFields.alumni}
                 onChange={onChange}
               />
               <label>Edustamasi taho</label>
@@ -160,7 +167,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                   checked={formFields.sillis}
                   onChange={onChange}
               />
-              <label>Allergies</label>
+              <label>Dietary restrictions</label>
               <input
                 type="text"
                 name="allergy"
@@ -187,6 +194,13 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 type="checkbox"
                 name="invited"
                 checked={formFields.invited}
+                onChange={onChange}
+              />
+              <label>I am an alumni</label>
+              <input
+                type="checkbox"
+                name="alumni"
+                checked={formFields.alumni}
                 onChange={onChange}
               />
               <label>Represented organisation</label>

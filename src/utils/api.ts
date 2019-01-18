@@ -35,6 +35,8 @@ export interface Registeration {
   /* Is the guest invited */
   invited: boolean;
 
+  alumni: boolean;
+
   /** What the attendee wants to tell other attendees */
   text: string;
 }

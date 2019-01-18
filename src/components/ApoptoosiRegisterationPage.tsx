@@ -42,6 +42,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
                 avec: '',
                 salute: false,
                 invited: false,
+                alumni: false,
                 text: '',
             },
             registerations: [],
@@ -104,10 +105,9 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
                 {({language}) => (
                 <div id="RegisterationPage">
                     <section id="Ilmoittautuminen" className="SignupForm">
-                    <h1 className="informationText">{this.state.currentDate.getTime() <= this.state.openingDate.getTime() ? 
+                    <h1 className="informationText">{ 
                         (language ? 'Ilmoittautuminen aukeaa kutsuvieraille perjantaina 18.1.2019 klo 12 ja muille vieraille viikon jälkeen perjantaina 25.1.2019 klo 12. Ilmoittautuminen sulkeutuu perjantaina 15.2.2019 23:55. Ilmoittautuminen on sitova.' 
-                        : 'Sign up opens for invited guests on Friday 18.1.2019 at 12:00, and for other guests one week afterwards, on Friday 25.1.2019 at 12:00. The sign up closes on Friday 15.2.2019 at 23:55. Registration is binding.') 
-                        : null}
+                        : 'Sign up opens for invited guests on Friday 18.1.2019 at 12:00, and for other guests one week afterwards, on Friday 25.1.2019 at 12:00. The sign up closes on Friday 15.2.2019 at 23:55. Registration is binding.')}
                     </h1>
                     <ApoptoosiForm
                     formFields={this.state.newRegisteration}
