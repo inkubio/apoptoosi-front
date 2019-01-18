@@ -90,7 +90,8 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
              place X. Next morning, the physical and mental wellbeing of the 
              guests is treated in the sillis breakfast at place Y where the 
              guests will be transported by bus from Otaniemi.
-
+             <br/><br/>
+            The dinner card for students is 75 euros and for the alumni 100 euros. Herring brunch is 20 euros.
             </p>
 
             <h1>Timetable</h1>
