@@ -9,6 +9,7 @@ import {
   } from '../utils/api';
   
 import {LanguageContext} from './ApoptoosiMain';
+import { timeout } from 'q';
 
 interface IApoptoosiRegisterationPage {
 
@@ -18,9 +19,11 @@ interface IApoptoosiRegisterationPage {
 
     loading: boolean,
 
-    currentDate: Date;
+    apiInUse: boolean,
 
-    openingDate: Date;
+    currentDate: Date,
+
+    openingDate: Date,
 }
 
 export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRegisterationPage> {
@@ -47,6 +50,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
             },
             registerations: [],
             loading: true,
+            apiInUse: false,
             currentDate: new Date(),
             openingDate: new Date('2019-01-18T12:00:00'),
         }
@@ -80,8 +84,33 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
 
       async handleSubmit(event: any) {
         event.preventDefault();
+
+        this.setState({apiInUse: true});
+
         await postRegisteration(this.state.newRegisteration);
         await this.updateRegisterations();
+
+        setTimeout(() => {
+            // Reset the form
+            this.setState({
+                newRegisteration: {
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    seatingGroup: '',
+                    alcohol: false,
+                    sillis: false,
+                    allergy: '',
+                    avec: '',
+                    salute: false,
+                    invited: false,
+                    alumni: false,
+                    text: '',
+                }
+            });
+            // Get api offline
+            this.setState({apiInUse: false});
+        }, 1500)
       }
 
       async updateRegisterations() {
@@ -113,6 +142,7 @@ export class ApoptoosiRegisterationPage extends React.Component<{}, IApoptoosiRe
                     formFields={this.state.newRegisteration}
                     onChange={this.handleChange}
                     onSubmit={this.handleSubmit}
+                    inLoading={this.state.apiInUse}
                     language={language}
                     />
                     </section>
