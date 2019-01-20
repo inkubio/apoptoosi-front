@@ -12,6 +12,8 @@ interface IApoptoosiFormProps {
   onSubmit: (event: any) => void;
 
   language: boolean;
+
+  inLoading: boolean;
 }
 
 /** Form for a new registeration to Apoptoosi.
@@ -23,10 +25,11 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
   onChange,
   onSubmit,
   language,
+  inLoading,
 }) => {
     const currentDate = new Date();
     const openingDate = new Date('2019-01-18T12:00:00');
-    const truthy: boolean = currentDate.getTime() < openingDate.getTime();
+    const truthy: boolean = currentDate.getTime() < openingDate.getTime() || inLoading;
     if(language) {
           return(
           <>
@@ -116,6 +119,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 value={formFields.text}
                 onChange={onChange}
               />
+
               <input className="inputButton" type="submit" value="Ilmoittaudu" disabled={truthy} />
           </form>
           </>
@@ -210,7 +214,8 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 value={formFields.text}
                 onChange={onChange}
               />
-              <input className="inputButton" type="submit" value="Submit" disabled={truthy}/>
+              <input className="inputButton" type="submit" value="Ilmoittaudu" disabled={truthy} />
+
           </form>
           </>
         );
