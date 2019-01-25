@@ -143,7 +143,7 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
                 value={formFields.lastName}
                 onChange={onChange}
               />
-              <label>email</label>Olen
+              <label>email</label>
               <input
                 type="email"
                 name="email"
