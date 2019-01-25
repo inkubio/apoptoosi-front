@@ -63,7 +63,7 @@ export const ApoptoosiApoptoosiXv = ({language}) => {
                     <tr>
                     <td>Sunnuntai 3.3.2019</td>
                     <td>12:00</td>
-                    <td>Silliaamiainen</td>
+                    <td>Sillisaamiainen</td>
                     <td>Paikka Y</td>
                     </tr>
                 </tbody>

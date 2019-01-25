@@ -25,7 +25,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
   if(language) {
     return(
       <div>
-      <h3>Ilmoittautuneet</h3>
+      <h3>Ilmoittautuneet {registerations.length} / 200</h3>
       {loading ? (
         <p>
           <em>lataus käynnissä...</em>
@@ -64,7 +64,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
   } else {
     return (
       <div>
-      <h3>Registered attendees</h3>
+      <h3>Registered attendees {registerations.length} / 200</h3>
       {loading ? (
         <p>
           <em>Loading...</em>
@@ -87,7 +87,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
                 <tbody>
                   {registerations.map(registeration => (
                     <tr key={registeration.lastName}>
-                      <td>{registeration.firstName + registeration.lastName}</td>
+                      <td>{registeration.firstName + ' ' + registeration.lastName}</td>
                       {/* <td>{registeration.lastName}</td> */}
                       <td>{registeration.seatingGroup}</td>
                       {/* <td>{registeration.text}</td> */}
