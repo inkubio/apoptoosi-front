@@ -89,7 +89,7 @@ export const ApoptoosiList: React.SFC<IApoptoosiListProps> = ({
                     <tr key={registeration.lastName}>
                       <td>{registeration.firstName + registeration.lastName}</td>
                       {/* <td>{registeration.lastName}</td> */}
-                      <td>{registeration.seatingGroup}</td>¨
+                      <td>{registeration.seatingGroup}</td>
                       {/* <td>{registeration.text}</td> */}
                     </tr>
                   ))}
