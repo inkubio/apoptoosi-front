@@ -29,7 +29,8 @@ export const ApoptoosiForm: React.SFC<IApoptoosiFormProps> = ({
 }) => {
     const currentDate = new Date();
     const openingDate = new Date('2019-01-18T12:00:00');
-    const truthy: boolean = currentDate.getTime() < openingDate.getTime() || inLoading;
+    // const truthy: boolean = currentDate.getTime() < openingDate.getTime() || inLoading;
+    const truthy = true;
     if(language) {
           return(
           <>

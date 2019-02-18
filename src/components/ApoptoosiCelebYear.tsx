@@ -42,14 +42,17 @@ export const ApoptoosiCelebYear = ({language}) => {
                             <tr>
                                 <td>Maanantai 4.2.2019</td>
                                 <td>Vujukuntoon: Miekkailu</td>
+                                <td>Tapiola</td>
                             </tr>
                             <tr>
-                                <td>Viikko 7</td>
-                                <td>Vujukuntoon: Jenkkifutis</td>
+                                <td>perjantai 11.2.2019</td>
+                                <td>Vujukuntoon: Amerikkalainen jalkapallo</td>
+                                <td>Otahalli, Otaranta 6</td>
                             </tr>
                             <tr>
                                 <td>Maanantai 18.2.2019</td>
                                 <td>Vujukuntoon: Tankotanssi</td>
+                                <td>Jämeräntaival 1, yhdistystila</td>
                             </tr>
                         </tbody>
                     </table>
@@ -83,7 +86,7 @@ export const ApoptoosiCelebYear = ({language}) => {
                                 <tr>
                                     <td>Torstai 28.2.2019</td>
                                     <td>Vujukuntoon jooga</td>
-                                    <td>Otarannan kerhotila</td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -114,20 +117,24 @@ export const ApoptoosiCelebYear = ({language}) => {
                         <tr>
                             <th>Date</th>
                             <th>Event</th>
+                            <th>Premise</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Monday 4.2.2019</td>
                             <td>Ball of Fitness:: Fencing</td>
+                            <td>Tapiola</td>
                         </tr>
                         <tr>
-                            <td>Week 7</td>
+                            <td>Friday 11.2.2019</td>
                             <td>Ball of Fitness:: American football</td>
+                            <td>Otahalli, Otaranta 6</td>
                         </tr>
                         <tr>
                             <td>Monday 18.2.2019</td>
                             <td>Ball of Fitness:: Pole dancing</td>
+                            <td>Jämeräntaival 1, club space</td>
                         </tr>
                     </tbody>
                 </table>
@@ -161,7 +168,7 @@ export const ApoptoosiCelebYear = ({language}) => {
                     <tr>
                         <td>Thursday 28.2.2019</td>
                         <td>Ball of Fitness: Joga</td>
-                        <td>Club room of Inkubio</td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>

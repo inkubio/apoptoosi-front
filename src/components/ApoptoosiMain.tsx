@@ -33,6 +33,7 @@ const BpG_logo = require('../assets/img/BpG_Logotype_blue.png');
 const Spinverse_logo = require('../assets/img/spinverse_fullcolor_NEW-01 (1).png');
 const MTK_logo = require('../assets/img/MTK.svg');
 const Mafia_logo = require('../assets/img/merkkimafia.svg');
+const hitachi_logo = require('../assets/img/hitachi-hightech.svg');
 
 /* Create global language boolean value */
 export const LanguageContext = React.createContext({language: true}); 
@@ -68,6 +69,7 @@ export class ApoptoosiMain extends React.Component<{}, IApoptoosiState> {
           BpG_logo,
           Spinverse_logo,
           MTK_logo,
+          hitachi_logo,
           Mafia_logo,
         ],
         //Finnish is the default language
