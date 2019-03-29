@@ -1,0 +1,284 @@
+$LIGHT: #f1f1f1;
+$DARK: #1a0826;
+$GOLD: #bdd836;
+$FontColor1: #36c;
+$FontColor2: #5c85d6;
+$FontColor3: #8aa9ff44;
+$FontColor: #24478f;
+$ButtonColor: #8aa9ff;
+$ContentBackgroundColor: #fff8;
+$InputBackgroundColor: #fff8;
+$PaddingValue: 3vw;
+$ExtraLargeFont: 12vh;
+$LargeFont: 4vh;
+$SmallFont: 3vh;
+
+$PrataFont: 'Prata', serif;
+$ChelseaFont: 'chelsea4', sans-serif;
+$NeutraFont:  'neutra', sans-serif;
+
+@font-face {
+  font-family: 'chelsea4';
+  src: url("../fonts/Chelsea.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'neutra';
+  src: url('../fonts/NeutraText-Book.otf');
+}
+
+/* The background image handling */
+html {
+  background: url("../img/vector_logo.svg"), url("../img/prettyPaint.jpg");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+/* The root component of the page. It contains the following components:
+    Section: LanguageChange
+    Section: Prologue; Title, Heading, date
+    Section: Countdown
+    Router:
+      Section: (router) Links
+      id: DefaultPage or RegisterationPage
+    Section: Footer
+    All section are defined by their class and pages by id.
+*/
+main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 80vw;
+  justify-content: center;
+  grid-template-areas:
+    "languageChange"
+    "heading"
+    "countdown"
+    "links"
+    "pageContent"
+    "footer";
+  font-family: $PrataFont;
+  line-height: 150%;
+  color: $FontColor;
+  min-height: 100vh;
+
+  /* The sections */
+  .LanguageChange {
+    grid-area: languageChange;
+
+    .languageButton {
+      border-color: $ButtonColor;
+      background-color: $ButtonColor;
+      color: $DARK;
+      min-width: 40px;
+      font-weight: bold;
+    }
+  }
+
+  .Prologue {
+    grid-area: heading;
+
+    .Title {
+      text-align: center;
+      padding-top: 5vh;
+      font-size: $ExtraLargeFont;
+      letter-spacing: 1vw;
+    }
+
+    .Heading {
+      font-size: $LargeFont;
+      text-align: center;
+      line-height: 20%;
+      letter-spacing: 4px;
+    }
+  }
+
+  .Countdown {
+    grid-area: countdown;
+    text-align: center;
+    font-size: $LargeFont;
+    font-family: $ChelseaFont;
+  }
+
+  .Links {
+    grid-area: links;
+
+    .nav-list {
+      padding: 0;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      font-size: $SmallFont;
+      font-weight: bold;
+
+      .nav-list-item {
+        display: block;
+        padding: 1rem;
+
+        a {
+          color: $FontColor;
+        }
+      }
+    }
+  }
+
+  /* The router rendered pages */
+  #RegisterationPage {
+    grid-area: pageContent;
+
+    .informationText {
+      font-family: 'neutra', sans-serif;
+    }
+
+    .SignupForm {
+      grid-area: signup;
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+    }
+
+    .Signup {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      font-family: 'neutra', sans-serif;
+
+      @media (max-width: 500px) {
+        grid-template-columns: auto;
+        grid-row-gap: 0;
+
+        input {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .inputButton {
+        background-color: $ButtonColor;
+        color: $DARK;
+        max-width: 70%;
+        border-color: $ButtonColor;
+
+        &:hover {
+          opacity: 0.6;
+        }
+
+        &:disabled {
+          pointer-events: none;
+          opacity: 0.2;
+        }
+      }
+    }
+
+    .RegisteredList {
+      grid-area: registerations;
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+      color: $FontColor;
+      font-family: 'neutra', sans-serif;
+
+      .table {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  #DefaultPage {
+    grid-area: pageContent;
+
+    .ContactInformation {
+      margin: 0 auto;
+      font-size: $SmallFont;
+      font-family: 'neutra', sans-serif;
+      text-align: center;
+    }
+
+    .CelebYear {
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+      align-items: center;
+
+      .table {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .ApoptoosiXV {
+      background-color: $ContentBackgroundColor;
+      padding: $PaddingValue;
+
+      .table {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .bulkText {
+      font-family: 'neutra', sans-serif;
+    }
+  }
+
+  .Footer {
+    grid-area: footer;
+    font-size: $LargeFont;
+
+    /* The main sponsor image */
+    .MainSponsor {
+      column-count: 1;
+      column-width: 100vw;
+      text-align: center;
+
+      img {
+        max-width: 40vw;
+        justify-content: center;
+        display: inline-block;
+      }
+
+      h1 {
+        column-span: all;
+        font-size: $LargeFont;
+        padding: 1vw;
+      }
+    }
+
+    /* The secondary sponsor images */
+    .SponsorFooter {
+      // column-count: 2;
+      // column-width: 50vw;
+      // text-align: center;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      // align-items: center;
+      // justify-content: center;
+      // align-content: center;
+      grid-gap: 1vw;
+
+      img {
+        width: 50%;
+        // justify-content: center;
+        justify-self: center;
+        // align-items: center;
+        // align-items: center;
+        // align-self: center;
+        display: inline-block;
+        max-width: 20rem;
+      }
+
+      h1 {
+        column-span: all;
+        grid-column: 1 / 3;
+        font-size: $LargeFont;
+        // align-items: center;
+        // justify-content: center;
+        justify-self: center;
+        // align-content: center;
+      }
+    }
+  }
+}
+
+.overflowDiv {
+  overflow-x: auto;
+}

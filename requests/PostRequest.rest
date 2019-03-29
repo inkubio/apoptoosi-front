@@ -1,0 +1,15 @@
+POST https://inkubaattori.aalto.fi/apoptoosi/api/RegistrationData/CreateRegistration
+Content-Type: application/json
+
+{
+    "firstName": "Otso",
+    "lastName": "Brummer",
+    "email": "otso.brummer@aalto.fi",
+    "seatingGroup": "Gambiina",
+    "alcohol": true,
+    "allergy": "-",
+    "avec": "-",
+    "salute": 0,
+    "invited": 1,
+    "text": "Mä pistän mestat palaa."
+}

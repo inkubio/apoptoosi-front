@@ -1,0 +1,1 @@
+GET https://inkubaattori.aalto.fi/apoptoosi/api/registrationdata/registrations

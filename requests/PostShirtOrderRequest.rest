@@ -1,0 +1,9 @@
+POST http://localhost:5000/api/ShirtOrders
+Content-Type: application/json
+
+{
+    "firstName": "TestiEka",
+    "lastName": "TestiToke",
+    "email": "vituttaa@inkubio.fi",
+    "size": "L",
+}
